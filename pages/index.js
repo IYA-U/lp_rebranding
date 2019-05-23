@@ -1,1 +1,1 @@
-export default () => <div>Welcome to next.js!</div>
+export default () => <h1>LPリブランディングの実験場</h1>;
