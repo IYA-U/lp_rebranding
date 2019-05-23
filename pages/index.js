@@ -1,1 +1,1 @@
-export default () => <h1>LPリブランディングの実験場</h1>;
+export default () => <h1>LPリブランディングの実験場makisatochan</h1>;
