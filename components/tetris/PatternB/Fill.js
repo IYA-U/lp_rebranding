@@ -83,6 +83,7 @@ const ImgArea = styled.div`
 const TextArea = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
+  text-align: justify;
   padding: 30px 15px 60px;
   @media ${device.TAB} {
     width: ${({ is64 }) => (is64 ? '40%' : '50%')};
@@ -120,6 +121,7 @@ const H2 = styled.div`
 
 const Text = styled.p`
   margin-top: 16px;
+  text-align: justify;
   @media ${device.PC} {
     margin-top: 36px;
   }
