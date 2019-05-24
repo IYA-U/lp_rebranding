@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PatternA from '../components/tetris/PatternA';
-import PatternB from '../components/tetris/PatternB';
+import PatternB from '../components/tetris/PatternB/index';
 import PatternC from '../components/tetris/PatternC';
 import PatternD from '../components/tetris/PatternD';
 import PatternE from '../components/tetris/PatternE';
@@ -37,22 +37,27 @@ const Tetris = () => {
     </Wrap>
   );
 };
+const SectionWrap = styled.div``;
 
 const Wrap = styled.div``;
 
 const PatternWrap = styled.div`
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 30px;
   &:after {
+    height: 30px;
     display: block;
-    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #6495ed;
+    font-size: 20px;
     padding: 4px;
     line-height: 1;
-    border-radius: 0px 0px 3px 0px;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #ccc;
+    width: 100%;
+    color: white;
     content: ${({ name }) => `"${name}"`};
   }
 `;

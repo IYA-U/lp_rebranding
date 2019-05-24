@@ -40,6 +40,8 @@ export default createGlobalStyle`
 
   p {
     margin-bottom: 0;
+    font-size:1.6rem;
+    line-height:1.87;
   }
 
   * {
