@@ -84,7 +84,7 @@ const TextArea = styled.div`
     width: ${({ is64 }) => (is64 ? '40%' : '50%')};
     padding: 85px 40px;
   }
-  @media ${device.TAB} {
+  @media ${device.PC} {
     padding: 160px 80px;
   }
 `;
