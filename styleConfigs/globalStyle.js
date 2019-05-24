@@ -51,7 +51,7 @@ export default createGlobalStyle`
   }
 
   @media (min-width: 640px) {
-    html { font-size: 11.4285px; }
+    html { font-size: 10px; }
     body {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
