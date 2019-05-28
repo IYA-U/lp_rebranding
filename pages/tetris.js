@@ -5,7 +5,7 @@ import PatternB from '../components/tetris/PatternB/index';
 import PatternC from '../components/tetris/PatternC';
 import PatternD from '../components/tetris/PatternD/index';
 import PatternE from '../components/tetris/PatternE';
-import PatternF from '../components/tetris/PatternF';
+import PatternF from '../components/tetris/PatternF/index';
 import Example from '../components/tetris/Example';
 
 const Tetris = () => (

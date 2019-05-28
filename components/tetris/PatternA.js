@@ -5,7 +5,7 @@ import device from '../../styleConfigs/breakPoints';
 
 const PatternA = () => (
   <Wrap>
-    <h1>工事中工事中工事中工事中工事中</h1>
+    <h1>未作成</h1>
   </Wrap>
 );
 
