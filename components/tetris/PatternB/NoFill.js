@@ -7,14 +7,16 @@ import SubPatternWrap from '../common/SubPatternWrap';
 const NoFill = () => (
   <>
     <SubPatternWrap name="B-1">
-      <SectionWrap>
-        <H1B1>ここがすごい、３つのポイント！</H1B1>
-        <H3B1>世界中で社会現象を起こしている「ウォーキングデッド」</H3B1>
-        <B1Text>極限に追い込まれた人間の心理を描いたヒューマンドラマ。現代社会の安全が破壊され秩序を失った世界で、生存者たちは確固たる人間性を保てるのか？そして生きるための「愛、強さ、責任感、自制心」とは?</B1Text>
-        <FullImg>
-          <img src="/static/img/twd.jpg" />
-        </FullImg>
-      </SectionWrap>
+      <Container>
+        <SectionWrap>
+          <H1B1>ここがすごい、３つのポイント！</H1B1>
+          <H3B1>世界中で社会現象を起こしている「ウォーキングデッド」</H3B1>
+          <B1Text>極限に追い込まれた人間の心理を描いたヒューマンドラマ。現代社会の安全が破壊され秩序を失った世界で、生存者たちは確固たる人間性を保てるのか？そして生きるための「愛、強さ、責任感、自制心」とは?</B1Text>
+          <FullImg>
+            <img src="/static/img/twd.jpg" />
+          </FullImg>
+        </SectionWrap>
+      </Container>
     </SubPatternWrap>
 
     <SubPatternWrap name="B-2">
