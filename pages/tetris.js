@@ -3,43 +3,36 @@ import styled from 'styled-components';
 import PatternA from '../components/tetris/PatternA';
 import PatternB from '../components/tetris/PatternB/index';
 import PatternC from '../components/tetris/PatternC';
-import PatternD from '../components/tetris/PatternD';
+import PatternD from '../components/tetris/PatternD/index';
 import PatternE from '../components/tetris/PatternE';
 import PatternF from '../components/tetris/PatternF';
-
 import Example from '../components/tetris/Example';
 
-const Tetris = () => {
-  console.log('wow');
-  return (
-    <Wrap>
-      <PatternWrap name="グリッドの見本">
-        <Example />
-      </PatternWrap>
-      <PatternWrap name="Pattern A">
-        <PatternA />
-      </PatternWrap>
-      <PatternWrap name="Pattern B">
-        <PatternB />
-      </PatternWrap>
-      <PatternWrap name="Pattern C">
-        <PatternC />
-      </PatternWrap>
-      <PatternWrap name="Pattern D">
-        <PatternD />
-      </PatternWrap>
-      <PatternWrap name="Pattern E">
-        <PatternE />
-      </PatternWrap>
-      <PatternWrap name="Pattern F">
-        <PatternF />
-      </PatternWrap>
-    </Wrap>
-  );
-};
-const SectionWrap = styled.div``;
-
-const Wrap = styled.div``;
+const Tetris = () => (
+  <>
+    <PatternWrap name="グリッドの見本">
+      <Example />
+    </PatternWrap>
+    <PatternWrap name="Pattern A">
+      <PatternA />
+    </PatternWrap>
+    <PatternWrap name="Pattern B">
+      <PatternB />
+    </PatternWrap>
+    <PatternWrap name="Pattern C">
+      <PatternC />
+    </PatternWrap>
+    <PatternWrap name="Pattern D">
+      <PatternD />
+    </PatternWrap>
+    <PatternWrap name="Pattern E">
+      <PatternE />
+    </PatternWrap>
+    <PatternWrap name="Pattern F">
+      <PatternF />
+    </PatternWrap>
+  </>
+);
 
 const PatternWrap = styled.div`
   position: relative;
