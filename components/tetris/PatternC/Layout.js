@@ -47,7 +47,6 @@ export const TextTitle = styled.h1`
   font-weight: bold;
   color: #000000;
   @media ${device.TAB} {
-    margin-top: 85px;
   }
   @media ${device.PC} {
     margin-top: 40px;
