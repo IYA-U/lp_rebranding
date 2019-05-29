@@ -110,17 +110,17 @@ const CardTextWrap = styled.div`
     width: 12px;
     height: 12px;
     border: 0px;
-    border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
+    border-top: solid 3px #ffffff;
+    border-right: solid 3px #ffffff;
     transform: rotate(45deg);
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 5%;
+    right: 6%;
     margin: auto 0;
     z-index: 2;
     @media ${device.PC} {
-      right: 7%;
+      right: 6%;
       width: 16px;
       height: 16px;
     }
@@ -130,12 +130,12 @@ const CardTextWrap = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: 55px;
-    height: 55px;
+    width: 15%;
+    height: 100%;
     background: #fdb847;
     @media ${device.PC} {
-      width: 80px;
-      height: 80px;
+      width: 15%;
+      height: 100%;
     }
   }
 `;
@@ -143,6 +143,10 @@ const CardText = styled.p`
   font-size: 14px;
   line-height: 55px;
   padding: 0 55px 0 5px;
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   a {
     font-size: 14px;
     text-decoration: none;

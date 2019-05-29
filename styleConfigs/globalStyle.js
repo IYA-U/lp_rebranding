@@ -68,4 +68,62 @@ export default createGlobalStyle`
     height: 100%;
   }
 }
+//slick 追加css
+.slick-next {
+  top:55% !important;
+  right:0 !important;
+  margin:auto 0 !important;
+  width:40px !important;
+  height:80px !important;
+  background:#000000 !important;
+  transform:translate(0,-50%);
+  cursor:pointer;
+  color:transparent;
+  border:none;
+  outline:0;
+  position:relative;
+  &:before {
+   content: ''!important;
+   width: 12px;
+    height: 12px;
+    border: 0px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 34%;
+    margin: auto 0;
+  }
+}
+.slick-prev {
+  top:55% !important;
+  left:0 !important;
+  margin:auto 0 !important;
+  width:40px !important;
+  height:80px !important;
+  background:#000000 !important;
+  transform:translate(0,-50%);
+  cursor:pointer;
+  color:transparent;
+  border:none;
+  outline:0;
+  position:relative;
+  z-index:3;
+  &:before {
+   content: ''!important;
+   width: 12px;
+    height: 12px;
+    border: 0px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 34%;
+    margin: auto 0;
+  }
+  
 `;

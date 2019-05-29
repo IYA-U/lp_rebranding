@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PatternA from '../components/tetris/PatternA';
 import PatternB from '../components/tetris/PatternB/index';
-import PatternC from '../components/tetris/PatternC';
+import PatternC from '../components/tetris/PatternC/index';
 import PatternD from '../components/tetris/PatternD/index';
 import PatternE from '../components/tetris/PatternE';
 import PatternF from '../components/tetris/PatternF/index';

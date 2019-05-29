@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
 
 export const SectionWrap = styled.div`
-  background: #ffcc00;
   padding: 60px 0;
 
   @media ${device.TAB} {
