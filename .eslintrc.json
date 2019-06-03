@@ -9,7 +9,7 @@
     "fetch": false,
     "window": true
   },
-  "plugins": ["react", "import", "prettier"],
+  "plugins": ["react", "import", "prettier", "better-styled-components"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 7,
@@ -19,6 +19,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "better-styled-components/sort-declarations-alphabetically": 2,
     "no-underscore-dangle": "off",
     "arrow-parens": ["error", "always"],
     "arrow-body-style": [2, "as-needed"],
