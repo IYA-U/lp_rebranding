@@ -3,13 +3,15 @@ import styled from 'styled-components';
 import { Container } from 'reactstrap';
 import device from '../../../styleConfigs/breakPoints';
 
-const Card = () => (
+const Card = ({
+  img, lead, title, paragraph,
+}) => (
   <Wrap>
-    <img src="/static/img/ironman.jpg" />
+    <img src={img} />
     <TextArea>
-      <h4>対テロ組織の大佐</h4>
-      <h3>イブ</h3>
-      <p>腕っ節の強さを買われてスカウトされた、司書たちの護衛的存在。</p>
+      <h4>{lead}</h4>
+      <h3>{title}</h3>
+      <p>{paragraph}</p>
     </TextArea>
   </Wrap>
 );

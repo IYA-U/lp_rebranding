@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+  position: relative;
   &:after {
+    background-color: #ccc;
+    border-radius: 0px 0px 3px 0px;
+    content: ${({ name }) => `"${name}"`};
     display: block;
     font-size: 12px;
-    padding: 4px;
+    left: 0;
     line-height: 1;
-    border-radius: 0px 0px 3px 0px;
+    padding: 4px;
     position: absolute;
     top: 0;
-    left: 0;
-    background-color: #ccc;
-    content: ${({ name }) => `"${name}"`};
-    
   }
 `;
