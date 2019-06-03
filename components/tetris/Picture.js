@@ -47,8 +47,10 @@ const Picture = ({ pictures }) => {
     <Wrap>
       <Container>
         <Row>
-          {pictures.map((picture) => (
-            <Col {...colWidth}>
+          {pictures.map((picture, index) => (
+            <Col
+              {...colWidth}
+              key={index}>
               <img src={picture} />
             </Col>
           ))}

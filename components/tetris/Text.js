@@ -58,13 +58,13 @@ const Paragraph = styled.p`
 `;
 
 const Wrap = styled.div`
-  margin: 60px 0;
+  margin: 60px 0 20px;
   padding: 0 20px;
   @media ${device.TAB} {
-    margin: 90px 0;
+    margin: 90px 0 20px;
   }
   @media ${device.PC} {
-    margin: 120px 0;
+    margin: 120px 0 40px;
   }
 `;
 

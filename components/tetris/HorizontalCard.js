@@ -38,7 +38,7 @@ const ImgArea = styled.div`
 `;
 
 const TextArea = styled.div`
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   padding: 30px 15px 60px;
   text-align: justify;

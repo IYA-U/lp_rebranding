@@ -1,9 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
 import Card from './Card';
-import device from '../../../styleConfigs/breakPoints';
-import SubPatternWrap from '../common/SubPatternWrap';
 
 const Cards = ({ cards }) => {
   const isOdd = cards.length % 2 > 0;
@@ -11,8 +8,9 @@ const Cards = ({ cards }) => {
   return (
     <Container>
       <Row>
-        {cards.map((card) => (
+        {cards.map((card, index) => (
           <Col
+            key={index}
             xs="12"
             md="6"
             lg={isOdd ? 4 : 3}>

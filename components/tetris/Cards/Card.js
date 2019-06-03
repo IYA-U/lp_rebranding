@@ -17,7 +17,7 @@ const Card = ({
 );
 
 const Wrap = styled.div`
-  background-color: #fdba47;
+  background-color: ${({ theme }) => theme.colors.primary};
   margin-top: 20px;
   /* box-shadow: 10px 10px 15px 3px rgba(0, 0, 0, 0.4); */
   @media ${device.TAB} {
