@@ -34,24 +34,24 @@ const Tetris = () => (
         <SubPatternWrap name="1">
           <Picture
             pictures={[
-              '//imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
             ]}
           />
         </SubPatternWrap>
         <SubPatternWrap name="2">
           <Picture
             pictures={[
-              '//imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
-              '//imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
             ]}
           />
         </SubPatternWrap>
         <SubPatternWrap name="3">
           <Picture
             pictures={[
-              '//imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
-              '//imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
-              '//imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=webp&output-quality=60',
             ]}
           />
         </SubPatternWrap>
@@ -59,10 +59,10 @@ const Tetris = () => (
         <SubPatternWrap name="4">
           <Picture
             pictures={[
-              '//imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
-              '//imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
-              '//imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=webp&output-quality=60',
-              '//imgc.nxtv.jp/img/info/titspot/00033/SID0033222_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033222_fwxga.png?output-format=webp&output-quality=60',
             ]}
           />
         </SubPatternWrap>
@@ -191,19 +191,19 @@ const Tetris = () => (
               {
                 text: 'フロリダ・プロジェクト 真夏の魔法',
                 thumbnail:
-                  '//imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
                 sid: 'SID0036791',
               },
               {
                 text: 'フロリダ・プロジェクト 真夏の魔法',
                 thumbnail:
-                  '//imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
                 sid: 'SID0036791',
               },
               {
                 text: 'フロリダ・プロジェクト 真夏の魔法',
                 thumbnail:
-                  '//imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
                 sid: 'SID0036791',
               },
             ]}
@@ -215,25 +215,25 @@ const Tetris = () => (
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  '//imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
                 sid: 'SID0034172',
               },
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  '//imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
                 sid: 'SID0034172',
               },
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  '//imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
                 sid: 'SID0034172',
               },
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  '//imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
                 sid: 'SID0034172',
               },
             ]}
