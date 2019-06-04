@@ -26,14 +26,25 @@ const Trailer = ({ texts, video }) => {
   }
   return (
     <Container>
-      <Video {...video} />
+      <Wrap>
+        <Video {...video} />
+      </Wrap>
     </Container>
   );
 };
 
+const Wrap = styled.div`
+  padding: 40px 20px;
+  @media ${device.PC} {
+    padding: 60px 0;
+  }
+`;
+
 const WrapText = styled.div`
   padding: 60px 20px;
   @media ${device.PC} {
+    padding: 60px 0;
+
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;

@@ -19,10 +19,14 @@ const HorizontalCard = ({
 
 const Wrap = styled.div`
   margin-top: 40px;
+  padding: 0 20px;
   @media ${device.TAB} {
     display: flex;
     align-items: stretch;
     flex-direction: ${({ isLeft }) => (isLeft ? 'row-reverse' : 'row')};
+  }
+  @media ${device.PC} {
+    padding: 0;
   }
 `;
 
