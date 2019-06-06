@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Feature = () => {
+const Trial = () => {
   console.log('WIP');
   return (
     <>
-      <p />
+      <p>無料トライルの２つの特徴</p>
     </>
   );
 };
 
-export default Feature;
+export default Trial;

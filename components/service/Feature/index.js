@@ -5,7 +5,7 @@ const Feature = () => {
   console.log('WIP');
   return (
     <>
-      <p />
+      <p>U-NEXTが選ばれる３つの特徴</p>
     </>
   );
 };

@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Feature = () => {
+const Footer = () => {
   console.log('WIP');
   return (
     <>
-      <p />
+      <p>フッター</p>
     </>
   );
 };
 
-export default Feature;
+export default Footer;

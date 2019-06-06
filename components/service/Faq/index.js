@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Feature = () => {
+const Faq = () => {
   console.log('WIP');
   return (
     <>
-      <p />
+      <p>よくある質問</p>
     </>
   );
 };
 
-export default Feature;
+export default Faq;

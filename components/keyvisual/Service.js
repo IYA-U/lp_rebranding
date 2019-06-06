@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Feature = () => {
+const KeyVisualService = () => {
   console.log('WIP');
   return (
     <>
-      <p />
+      <p>観る読むぜんぶ、あなたのもとへ</p>
     </>
   );
 };
 
-export default Feature;
+export default KeyVisualService;
