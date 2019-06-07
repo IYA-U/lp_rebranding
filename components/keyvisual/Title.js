@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import device from '../../styleConfigs/breakPoints';
 
 export const Config = React.createContext();
-
 class Title extends Component {
   constructor(props) {
     super(props);
@@ -127,33 +127,50 @@ const Wrap = styled.div`
 `;
 
 const MainBlock = styled.div`
-  background-color: ${({ theme }) => theme.device.isPc ? '#192330' : 'transparent'};
-  display: ${({ theme }) => (theme.device.isPc ? 'flex' : 'block')};
-  flex-direction: ${({ theme }) => theme.device.isPc ? 'row-reverse' : 'column'};
+  background-color: transparent;
+  display: block;
+  flex-direction: column;
   height: auto;
   justify-content: center;
-  margin-top: ${({ theme }) => (theme.device.isPc ? '0px' : '65px')};
-  padding: ${({ theme }) => (theme.device.isPc ? '0px' : '15px')};
+  margin-top: 65px;
+  padding: 15px;
   position: relative;
-  width: ${({ theme }) => (theme.device.isPc ? '90%' : '100%')};
+  width: 100%;
   z-index: 5;
+  @media ${device.TAB} {
+    background-color: #192330;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 0px;
+    padding: 0px;
+    width: 90%;
+  }
 `;
 
 const ImageWrap = styled.div`
   background-color: green;
-  min-width: ${({ theme }) => (theme.device.isPc ? '500px' : '0')};
+  min-width: 0;
   position: relative;
-  width: ${({ theme }) => (theme.device.isPc ? '70%' : '100%')};
+  width: 100%;
+  @media ${device.TAB} {
+    min-width: 500px;
+    width: 70%;
+  }
 `;
 
 const TitleText = styled.h1`
-  font-size: ${({ theme }) => (theme.device.isPc ? '45px' : '20px')};
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: 0.03em;
   line-height: 1.4;
-  margin-top: ${({ theme }) => (theme.device.isPc ? '0' : '20px')};
-  text-align: ${({ theme }) => (theme.device.isPc ? 'left' : 'left')};
-  width: ${({ theme }) => (theme.device.isPc ? '100%' : '100%')};
+  margin-top: 0px;
+  text-align: left;
+  width: 100%;
+  @media ${device.TAB} {
+    font-size: 45px;
+    margin-top: 0;
+    text-align: left;
+  }
 `;
 
 const InfoWrap = styled.div`
@@ -162,15 +179,22 @@ const InfoWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: ${({ theme }) => (theme.device.isPc ? '30px' : '0')};
-  width: ${({ theme }) => (theme.device.isPc ? '30%' : '100%')};
+  padding: 0;
+  width: 100%;
+  @media ${device.TAB} {
+    padding: 30px;
+    width: 30%;
+  }
 `;
 
 const Catch = styled.p`
-  font-size: ${({ theme }) => (theme.device.isPc ? '22px' : '14px')};
+  font-size: 14px;
   line-height: 1.5;
   margin-top: 10px;
   width: 100%;
+  @media ${device.TAB} {
+    font-size: 22px;
+  }
 `;
 
 const Badge = styled.p`
@@ -181,7 +205,7 @@ const Badge = styled.p`
 
 const Cta = styled.div`
   align-items: center;
-  background-color: ${({ theme }) => theme.ctaColor};
+  background-color: green;
   color: white;
   display: flex;
   font-size: 16px;

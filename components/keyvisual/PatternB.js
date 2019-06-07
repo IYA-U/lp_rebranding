@@ -10,10 +10,12 @@ const PatternB = () => (
       <picture>
         <source
           media="(max-width: 639px)"
-          srcSet="/static/img/keyvisual/main/pc/scroll-horizontal.jpg" />
+          srcSet="/static/img/keyvisual/main/pc/scroll-horizontal.jpg"
+        />
         <source
           media="(min-width: 640px)"
-          srcSet="/static/img/keyvisual/main/sp/scroll-horizontal.jpg" />
+          srcSet="/static/img/keyvisual/main/sp/scroll-horizontal.jpg"
+        />
         <img
           src="/static/img/keyvisual/main/pc/scroll-horizontal.jpg"
           alt="" />
@@ -26,26 +28,26 @@ const PatternB = () => (
 );
 
 const Wrap = styled.div`
-  position: relative;
-  display: flex;
-  height: 100%;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
   flex-direction: column;
+  height: 100%;
+  position: relative;
   @media ${device.TAB} {
     flex-direction: row-reverse;
   }
 `;
 
 const InfoArea = styled.div`
-  position: relative;
-  z-index: 5;
-  height: 40%;
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.95);
-  padding: 30px;
   display: flex;
+  height: 40%;
   justify-content: center;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  z-index: 5;
   @media ${device.TAB} {
     height: 100%;
     width: 40%;
@@ -64,8 +66,8 @@ const imgSlideHorizontal = keyframes`
 
 const PictureArea = styled.div`
   height: 60%;
-  width: 100%;
   overflow: hidden;
+  width: 100%;
   @media ${device.TAB} {
     height: 100%;
     width: 60%;
@@ -73,9 +75,9 @@ const PictureArea = styled.div`
   img {
     animation: ${imgSlideHorizontal} 150s linear infinite;
     height: 100%;
-    width: auto;
     max-height: 100%;
     max-width: none;
+    width: auto;
     @media ${device.TAB} {
       height: 100%;
     }

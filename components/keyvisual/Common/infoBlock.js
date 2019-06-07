@@ -1,12 +1,17 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Config } from '../../../pages/keyvisual';
+import device from '../../../styleConfigs/breakPoints';
+import { Config } from '../../Layout/withLayout';
 
 const InfoBlock = () => {
   const config = useContext(Config);
   return (
     <Wrap>
-      <Text dangerouslySetInnerHTML={{ __html: '充実のライナップ！<br/>何かのテキストが2行' }} />
+      <Text
+        dangerouslySetInnerHTML={{
+          __html: '充実のライナップ！',
+        }}
+      />
       <img
         src="/static/img/keyvisual/centerImage/teiichi.png"
         alt="" />
@@ -16,31 +21,35 @@ const InfoBlock = () => {
 };
 
 const Text = styled.p`
-  font-size: ${({ theme }) => (theme.device.isPc ? '26px' : '18px')};
+  color: white;
+  font-size: 18px;
   line-height: 1.45;
-  color: ${({ theme }) => theme.infoBlockTextColor};
+  text-align: center;
+  @media ${device.TAB} {
+    font-size: 26px;
+  }
 `;
 
 const Wrap = styled.div`
-  height: 100%;
-  width: 100%;
-  max-width: 480px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
   justify-content: center;
+  max-width: 480px;
+  width: 100%;
 `;
 
 const Cta = styled.div`
-  margin-top: 20px;
-  height: 75px;
-  width: calc(100% - 30px);
-  background-color: ${({ theme }) => theme.ctaColor};
-  color: white;
-  font-size: 16px;
-  display: flex;
   align-items: center;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: white;
+  display: flex;
+  font-size: 16px;
+  height: 75px;
   justify-content: center;
+  margin-top: 20px;
+  width: calc(100% - 30px);
 `;
 
 export default InfoBlock;

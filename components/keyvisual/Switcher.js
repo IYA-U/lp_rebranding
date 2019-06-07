@@ -15,7 +15,9 @@ const Switcher = () => (
         }
 
         return (
-          <Row style={{ marginTop: '5px' }}>
+          <Row
+            style={{ marginTop: '5px' }}
+            key={name}>
             <Col xs={{ size: 10, offset: 1 }}>
               <a href={path}>
                 <Button
