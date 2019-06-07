@@ -42,7 +42,7 @@ const Wrap = styled.div`
 
 const Cta = styled.div`
   align-items: center;
-  background-color: green;
+  background-color: ${({ theme }) => theme.colors.primary};
   color: white;
   display: flex;
   font-size: 16px;
@@ -54,7 +54,7 @@ const Cta = styled.div`
 `;
 
 const TitleText = styled.div`
-  color: ${({ theme }) => theme.infoBlockTextColor};
+  color: white;
   font-size: 3rem;
   line-height: 1.4;
   margin-top: 0.5rem;

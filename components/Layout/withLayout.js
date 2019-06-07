@@ -12,6 +12,7 @@ const withLayout = (ComposedComponent) => class extends React.Component {
       device: {
         windowHeight: 0,
         windowWidth: 0,
+        isPc: false,
       },
     };
   }
@@ -47,6 +48,7 @@ const withLayout = (ComposedComponent) => class extends React.Component {
         device: {
           windowHeight: window.innerHeight,
           windowWidth: window.innerWidth,
+          isPc: window.innerWidth > 640,
         },
       });
     };
