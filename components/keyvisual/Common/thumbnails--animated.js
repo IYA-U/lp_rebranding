@@ -10,7 +10,7 @@ const ThumbNails = ({ dummy }) => {
 
   useInterval(() => {
     setFlipped(!flipped);
-  }, 2000);
+  }, 3000);
 
   return (
     <Wrap>
@@ -18,10 +18,10 @@ const ThumbNails = ({ dummy }) => {
         <FlipCard
           flipped={flipped}
           front={
-            <img src="//imgc.nxtv.jp/img/info/eps/00186/ED00186815.png?output-format=webp&output-quality=60" />
+            <img src="https://imgc.nxtv.jp/img/info/eps/00186/ED00186815.png?output-format=webp&output-quality=60" />
           }
           back={
-            <img src="//imgc.nxtv.jp/img/info/eps/00205/ED00205736.png?output-format=webp&output-quality=60" />
+            <img src="https://imgc.nxtv.jp/img/info/eps/00205/ED00205736.png?output-format=webp&output-quality=60" />
           }
         />
       </Thumb1>
@@ -29,10 +29,10 @@ const ThumbNails = ({ dummy }) => {
         <FlipCard
           flipped={flipped}
           front={
-            <img src="//imgc.nxtv.jp/img/info/eps/00205/ED00205736.png?output-format=webp&output-quality=60" />
+            <img src="https://imgc.nxtv.jp/img/info/eps/00205/ED00205736.png?output-format=webp&output-quality=60" />
           }
           back={
-            <img src="//imgc.nxtv.jp/img/info/eps/00186/ED00186815.png?output-format=webp&output-quality=60" />
+            <img src="https://imgc.nxtv.jp/img/info/eps/00186/ED00186815.png?output-format=webp&output-quality=60" />
           }
         />
       </Thumb2>
@@ -40,10 +40,10 @@ const ThumbNails = ({ dummy }) => {
         <FlipCard
           flipped={flipped}
           front={
-            <img src="//imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60" />
+            <img src="https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60" />
           }
           back={
-            <img src="//imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60" />
+            <img src="https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60" />
           }
         />
       </Thumb3>
