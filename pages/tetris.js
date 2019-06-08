@@ -34,24 +34,24 @@ const Tetris = () => (
         <SubPatternWrap name="1">
           <Picture
             pictures={[
-              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=jpeg&output-quality=60',
             ]}
           />
         </SubPatternWrap>
         <SubPatternWrap name="2">
           <Picture
             pictures={[
-              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
-              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=jpeg&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=jpeg&output-quality=60',
             ]}
           />
         </SubPatternWrap>
         <SubPatternWrap name="3">
           <Picture
             pictures={[
-              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
-              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
-              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=jpeg&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=jpeg&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=jpeg&output-quality=60',
             ]}
           />
         </SubPatternWrap>
@@ -59,10 +59,10 @@ const Tetris = () => (
         <SubPatternWrap name="4">
           <Picture
             pictures={[
-              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=webp&output-quality=60',
-              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=webp&output-quality=60',
-              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=webp&output-quality=60',
-              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033222_fwxga.png?output-format=webp&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00019/SID0019592_fwxga.png?output-format=jpeg&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033220_fwxga.png?output-format=jpeg&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033221_fwxga.png?output-format=jpeg&output-quality=60',
+              'https://imgc.nxtv.jp/img/info/titspot/00033/SID0033222_fwxga.png?output-format=jpeg&output-quality=60',
             ]}
           />
         </SubPatternWrap>
@@ -70,7 +70,7 @@ const Tetris = () => (
 
       <PatternWrap name="PictureText">
         <PictureText
-          picture="//imgc.nxtv.jp/img/info/titspot/00020/SID0020051_fwxga.png?output-format=webp&output-quality=60"
+          picture="//imgc.nxtv.jp/img/info/titspot/00020/SID0020051_fwxga.png?output-format=jpeg&output-quality=60"
           subhead="01. ただのゾンビ•ドラマと思うなかれ！"
           paragraph="極限に追い込まれた人間の心理を描いたヒューマンドラマ。現代社会の安全が破壊され秩序を失った世界で、生存者たちは確固たる人間性を保てるのか？そして生きるための「愛、強さ、責任感、自制心」とは？"
         />
@@ -191,19 +191,19 @@ const Tetris = () => (
               {
                 text: 'フロリダ・プロジェクト 真夏の魔法',
                 thumbnail:
-                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=jpeg&output-quality=60',
                 sid: 'SID0036791',
               },
               {
                 text: 'フロリダ・プロジェクト 真夏の魔法',
                 thumbnail:
-                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=jpeg&output-quality=60',
                 sid: 'SID0036791',
               },
               {
                 text: 'フロリダ・プロジェクト 真夏の魔法',
                 thumbnail:
-                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=jpeg&output-quality=60',
                 sid: 'SID0036791',
               },
             ]}
@@ -215,25 +215,25 @@ const Tetris = () => (
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=jpeg&output-quality=60',
                 sid: 'SID0034172',
               },
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=jpeg&output-quality=60',
                 sid: 'SID0034172',
               },
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=jpeg&output-quality=60',
                 sid: 'SID0034172',
               },
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:
-                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=webp&output-quality=60',
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=jpeg&output-quality=60',
                 sid: 'SID0034172',
               },
             ]}
