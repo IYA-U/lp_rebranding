@@ -7,7 +7,7 @@ const InfoBlock = () => {
   const config = useContext(Config);
   return (
     <Wrap>
-      <TitleText dangerouslySetInnerHTML={{ __html: '観る、読む、全部' }} />
+      <TitleText dangerouslySetInnerHTML={{ __html: '観る、読む、ぜんぶ' }} />
       <Text
         dangerouslySetInnerHTML={{
           __html: '充実のライナップ！<br/>何かのテキストが2行',
@@ -21,6 +21,7 @@ const InfoBlock = () => {
 const Text = styled.p`
   color: white;
   font-size: 18px;
+  font-weight: bold;
   line-height: 1.45;
   margin-top: 0.5rem;
   text-align: center;
