@@ -3,14 +3,21 @@ import styled from 'styled-components';
 
 import { useSpring, animated } from 'react-spring';
 
-const FlipCard = ({ front, back, flipped }) => {
+const FlipCard = ({ front, back }) => {
+  const [flipped, setFlipped] = useState(false);
+
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
-    transform: `perspective(375px) rotateX(${flipped ? 180 : 0}deg)`,
+    transform: `perspective(100vw) rotateX(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   });
+
   return (
-    <Wrap>
+    <Wrap
+      onClick={() => {
+        setFlipped(!flipped);
+      }}
+    >
       <FrontCard
         style={{ opacity: opacity.interpolate((o) => 1 - o), transform }}
       >
@@ -41,6 +48,7 @@ const Card = styled(animated.div)`
   top: 0;
   cursor: pointer;
   will-change: transform, opacity;
+  width: 100%;
 `;
 
 const FrontCard = styled(Card)`

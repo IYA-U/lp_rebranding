@@ -1,21 +1,37 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, useTrail, animated } from 'react-spring';
 import device from '../../../styleConfigs/breakPoints';
 import { Config } from '../../Layout/withLayout';
 
 const InfoBlock = () => {
   const ctaAnimation = useSpring({
-    delay: 1000,
+    delay: 1500,
     to: {
-      height: '75px',
+      height: '60px',
       color: 'rgba(255,255,255,1)',
     },
-    from: { height: '0px', color: 'rgba(255,255,255,0)' },
+    from: {
+      height: '0px',
+      color: 'rgba(255,255,255,0)',
+    },
+  });
+
+  const titles = ['観るのも読むのも', 'U-NEXTひとつ'];
+
+  const titleCoverAnimation1 = useSpring({
+    delay: 0,
+    to: { width: '0' },
+    from: { width: '100%' },
+  });
+  const titleCoverAnimation2 = useSpring({
+    delay: 500,
+    to: { width: '0' },
+    from: { width: '100%' },
   });
 
   const textAnimation = useSpring({
-    delay: 1000,
+    delay: 1500,
     to: {
       color: 'rgba(255,255,255,1)',
     },
@@ -25,11 +41,16 @@ const InfoBlock = () => {
   const config = useContext(Config);
   return (
     <Wrap>
-      <TitleText
-        dangerouslySetInnerHTML={{
-          __html: '観るのも読むのも<br/>U-NEXTひとつ',
-        }}
-      />
+      <TitleTextArea>
+        <TitleText>
+          観るのも読むのも
+          <TitleTextCover style={titleCoverAnimation1} />
+        </TitleText>
+        <TitleText>
+          U-NEXTひとつ
+          <TitleTextCover style={titleCoverAnimation2} />
+        </TitleText>
+      </TitleTextArea>
       <Text
         dangerouslySetInnerHTML={{
           __html:
@@ -53,14 +74,29 @@ const Wrap = styled.div`
   width: 100%;
 `;
 
-const TitleText = styled.div`
+const TitleTextArea = styled.div`
+  width: 100%;
+`;
+
+const TitleText = styled.h2`
   color: white;
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 0.05em;
-  line-height: 1.35;
-  margin-top: 0.5rem;
+  line-height: 38px;
+  position: relative;
   width: 100%;
+  will-change: transform, opacity;
+`;
+
+const TitleTextCover = styled(animated.div)`
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 95%);
+  z-index: 2;
 `;
 
 const Text = styled(animated.p)`
@@ -81,10 +117,11 @@ const Cta = styled(animated.div)`
   color: white;
   display: flex;
   font-size: 16px;
-  height: 75px;
+  height: 55px;
   justify-content: center;
   margin-top: 15px;
   width: 100%;
+  overflow: hidden;
 `;
 
 export default InfoBlock;

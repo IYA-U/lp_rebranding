@@ -1,50 +1,60 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import useInterval from '../../../util/useInterval';
-import FlipCard from '../../common/FlipCard';
+import FlipCard from '../../common/FlipCard--infinite';
 import device from '../../../styleConfigs/breakPoints';
 
 const ThumbNails = ({ dummy }) => {
-  const [flipped, setFlipped] = useState(false);
-
-  useInterval(() => {
-    setFlipped(!flipped);
-  }, 3000);
-
+  const createThumbPath = (sid) => `https://imgc.nxtv.jp/img/info/tit/000${sid.slice(
+    5,
+    7,
+  )}/${sid}.png?output-quality=80&output-format=jpg`;
   return (
     <Wrap>
       <Thumb1>
         <FlipCard
-          flipped={flipped}
-          front={
-            <img src="https://imgc.nxtv.jp/img/info/eps/00186/ED00186815.png?output-format=jpeg&output-quality=60" />
-          }
-          back={
-            <img src="https://imgc.nxtv.jp/img/info/eps/00205/ED00205736.png?output-format=jpeg&output-quality=60" />
-          }
+          contents={[
+            'SID0031848',
+            'SID0035180',
+            'SID0035672',
+            'SID0033606',
+            'SID0033704',
+            'SID0034200',
+            'SID0032019',
+          ].map((sid) => (
+            <img src={createThumbPath(sid)} />
+          ))}
         />
       </Thumb1>
       <Thumb2>
         <FlipCard
-          flipped={flipped}
-          front={
-            <img src="https://imgc.nxtv.jp/img/info/eps/00205/ED00205736.png?output-format=jpeg&output-quality=60" />
-          }
-          back={
-            <img src="https://imgc.nxtv.jp/img/info/eps/00186/ED00186815.png?output-format=jpeg&output-quality=60" />
-          }
+          contents={[
+            'SID0031398',
+            'SID0031774',
+
+            'SID0030730',
+            'SID0032242',
+            'SID0034213',
+            'SID0033217',
+            'SID0027813',
+          ].map((sid) => (
+            <img src={createThumbPath(sid)} />
+          ))}
         />
       </Thumb2>
       <Thumb3>
         <FlipCard
-          flipped={flipped}
-          front={
-            <img src="https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=jpeg&output-quality=60" />
-          }
-          back={
-            <img src="https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=jpeg&output-quality=60" />
-          }
+          contents={[
+            'SID0035811',
+            'SID0029948',
+
+            'SID0034399',
+            'SID0028167',
+            'SID0032901',
+            'SID0020518',
+          ].map((sid) => (
+            <img src={createThumbPath(sid)} />
+          ))}
         />
       </Thumb3>
     </Wrap>

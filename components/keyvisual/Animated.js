@@ -7,7 +7,7 @@ import ThumbNails from './Common/thumbnails--animated';
 
 const PatternB = () => {
   const infoAreaAnimation = useSpring({
-    delay: 1000,
+    delay: 1500,
     to: {
       height: '45%',
     },
@@ -44,33 +44,16 @@ const InfoArea = styled(animated.div)`
   background-color: rgba(0, 0, 0, 0.95);
   left: 0;
   bottom: 0;
-  height: 50%;
+  /* height: 100%; */
+  height: 45%;
+
   justify-content: center;
-  padding: 30px 30px 15px;
+  padding: 20px 30px 0px;
   width: 100%;
   z-index: 5;
   @media ${device.TAB} {
     height: 100%;
     width: 40%;
-  }
-`;
-
-const InfoAreaInner = styled.div`
-  bottom: 0;
-  display: flex;
-  height: 260px;
-  left: 0%;
-  position: absolute;
-  width: 100%;
-`;
-
-const imgSlideHorizontal = keyframes`
-  from {
-    transform: translateX(0%);
-  }
-
-  to {
-    transform: translateX(-100%);
   }
 `;
 
