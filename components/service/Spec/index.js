@@ -14,6 +14,7 @@ import {
   DefaultWrap,
   MoreWrap,
   TogglerWrap,
+  Arrow,
 } from './Layout';
 
 const Spec = () => {
@@ -42,7 +43,7 @@ const Spec = () => {
     },
     {
       spec: 'アカウントごとの機能制限設定',
-      detail: <img src="/static/img/check.png" />,
+      detail: <img src="/static/img/check@2x.png" />,
       underline: 'underline',
     },
     {
@@ -52,27 +53,27 @@ const Spec = () => {
     },
     {
       spec: 'フルHD画質 / 4K画質',
-      detail: <img src="/static/img/check.png" />,
+      detail: <img src="/static/img/check@2x.png" />,
       underline: 'underline',
     },
     {
       spec: '高音質（DOLBY DIGITAL PLUS）',
-      detail: <img src="/static/img/check.png" />,
+      detail: <img src="/static/img/check@2x.png" />,
       underline: null,
     },
     {
       spec: 'テレビ / スマホ / PCなどに対応',
-      detail: <img src="/static/img/check.png" />,
+      detail: <img src="/static/img/check@2x.png" />,
       underline: null,
     },
     {
       spec: 'ダウンロード機能',
-      detail: <img src="/static/img/check.png" />,
+      detail: <img src="/static/img/check@2x.png" />,
       underline: null,
     },
     {
       spec: '動画も書籍も楽しめる',
-      detail: <img src="/static/img/check.png" />,
+      detail: <img src="/static/img/check@2x.png" />,
       underline: null,
     },
     {
@@ -92,7 +93,7 @@ const Spec = () => {
     },
     {
       spec: 'いつでも簡単に解約できる',
-      detail: <img src="/static/img/check.png" />,
+      detail: <img src="/static/img/check@2x.png" />,
       underline: null,
     },
   ];
@@ -109,10 +110,10 @@ const Spec = () => {
                     <SpecList>
                       <DefList>
                         <DefTerm className={`${list.underline}`}>
-                          {list.spec}
+                          <p>{list.spec}</p>
                         </DefTerm>
                         <DefDes className={`${list.underline}`}>
-                          {list.detail}
+                          <p>{list.detail}</p>
                         </DefDes>
                       </DefList>
                     </SpecList>
@@ -121,7 +122,9 @@ const Spec = () => {
               </DefaultWrap>
               {/* スマホのみ表示 */}
               <TogglerWrap>
-                <p id="toggler">もっと見る</p>
+                <p id="toggler">
+                  もっと見る<Arrow></Arrow>
+                </p>
                 <UncontrolledCollapse toggler="#toggler">
                   <MoreWrap>
                     <SpecWrap>
@@ -129,10 +132,10 @@ const Spec = () => {
                         <SpecList>
                           <DefList>
                             <DefTerm className={`${list.underline}`}>
-                              {list.spec}
+                              <p>{list.spec}</p>
                             </DefTerm>
                             <DefDes className={`${list.underline}`}>
-                              {list.detail}
+                              <p>{list.detail}</p>
                             </DefDes>
                           </DefList>
                         </SpecList>
