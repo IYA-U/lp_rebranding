@@ -9,7 +9,7 @@ const InfoBlock = () => {
     <Wrap>
       <Text
         dangerouslySetInnerHTML={{
-          __html: '充実のライナップ！',
+          __html: '充実のライナップだよ',
         }}
       />
       <img
