@@ -9,12 +9,10 @@ const Sl = (props) => {
     <>
       <SpecList>
         <DefList>
-          <DefTerm
-            className={`${props.data.hasunderlined ? 'underline' : null}`}>
+          <DefTerm className={props.data.hasunderlined ? 'underline' : null}>
             <p>{props.data.spec}</p>
           </DefTerm>
-          <DefDes
-            className={`${props.data.hasunderlined ? 'underline' : null}`}>
+          <DefDes className={props.data.hasunderlined ? 'underline' : null}>
             <p>{props.data.detail}</p>
           </DefDes>
         </DefList>
