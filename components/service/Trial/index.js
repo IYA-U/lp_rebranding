@@ -26,10 +26,8 @@ const Trial = () => (
 
     <TokurenWrap>
       {TOKUTEN.map((data, index) => (
-        <CardWrap>
-          <Card
-            {...data}
-            key={index}></Card>
+        <CardWrap key={index}>
+          <Card {...data}></Card>
         </CardWrap>
       ))}
       <TextExe>
@@ -43,7 +41,6 @@ const Wrap = styled.div`
   @media ${device.PC} {
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 80px;
   }
 `;
 
