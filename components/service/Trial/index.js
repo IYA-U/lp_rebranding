@@ -1,137 +1,103 @@
 import React from 'react';
 import styled from 'styled-components';
+import Card from './Card';
 import device from '../../../styleConfigs/breakPoints';
+
+const TOKUTEN = [
+  {
+    lead: '130,000本以上の動画<br/>70誌以上の雑誌が',
+    main: '見放題<br/>読み放題',
+    numberText: '31日間<span>0</span>円',
+  },
+  {
+    lead: '最新作の<br/>レンタルに使える',
+    main: 'ポイント<br/>プレゼント',
+    numberText: '<span>600</span>円分',
+  },
+];
 
 const Trial = () => (
   <Wrap>
     <Title>
       無料トライアルの
-      <br />
-      2つの特典
+      <Br />
+      <span>2つの特典</span>
     </Title>
+
     <TokurenWrap>
       {TOKUTEN.map((data, index) => (
-        <TokurenLi
-          background={data.background}
-          key={index}>
-          <Text dangerouslySetInnerHTML={{ __html: data.text }} />
-        </TokurenLi>
+        <CardWrap>
+          <Card
+            {...data}
+            key={index}></Card>
+        </CardWrap>
       ))}
+      <TextExe>
+        U-NEXTがお届けするサービスを、31⽇間ゆっくりとお試しください。
+      </TextExe>
     </TokurenWrap>
-    <TextExe>
-      U-NEXTがお届けするサービスを、31⽇間ゆっくりとお試しください。
-    </TextExe>
   </Wrap>
 );
 
 const Wrap = styled.div`
-  background-color: #15aa93;
-  padding-bottom: 40px;
   @media ${device.PC} {
-    padding: 0 60px;
-    max-width: 1152px;
+    max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 84px;
-  }
-`;
-
-const Title = styled.h3`
-  color: #ffffff;
-  font-size: 32px;
-  padding-left: 32px;
-  padding-top: 40px;
-  text-align: left;
-  @media ${device.PC} {
-    font-size: 64px;
-    padding-top: 84px;
-    text-align: center;
-  }
-  br {
-    display: block;
-    @media ${device.PC} {
-      display: none;
-    }
+    padding-bottom: 80px;
   }
 `;
 
 const TokurenWrap = styled.ul`
+  background-color: rgba(0, 0, 0, 0.04);
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  justify-content: space-between;
+  padding: 40px 10px;
   @media ${device.PC} {
-    margin: 40px 60px 0 60px;
+    padding: 0 20px;
+    background-color: transparent;
   }
 `;
 
-const TokurenLi = styled.li`
-  background-image: url(${({ background }) => background});
-  background-size: cover;
-  position: relative;
-  width: 50%;
-
+const CardWrap = styled.div`
+  width: calc(50% - 5px);
   @media ${device.PC} {
-    width: 100%;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.1);
-    background-size: auto 200px;
-    background-repeat: no-repeat;
-  }
-  &:nth-child(2) {
-    @media ${device.PC} {
-      margin-top: 16px;
-    }
-  }
-`;
-
-const Text = styled.p`
-  color: #ffffff;
-  font-size: 16px;
-  margin: 40px 32px;
-  text-align: justfy;
-  @media ${device.TAB} {
-    font-size: 28px;
-    margin: 60px 60px;
-  }
-  @media ${device.PC} {
-    font-size: 28px;
-    margin: 0;
-    position: absolute;
-    top: 48px;
-    left: 254px;
-  }
-  br {
-    display: none;
-    @media ${device.TAB} {
-      display: block;
-    }
+    width: calc(50% - 20px);
   }
 `;
 
 const TextExe = styled.p`
-  color: #ffffff;
-  font-size: 16px;
-  margin: 20px 32px 0 32px;
-  text-align: justfy;
+  color: #505050;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 20px 20px 0;
   @media ${device.PC} {
-    margin-top: 40px;
-    font-size: 32px;
+    margin-top: 20px;
+    font-size: 24px;
     text-align: center;
   }
 `;
 
-export const TOKUTEN = [
-  {
-    text: '⾒放題の動画が、90,000本以上。<br>読み放題の雑誌が、70誌以上。',
-    background: '/static/img/trial_bg01@2x.png',
-  },
-  {
-    text: 'レンタル作品などに使える600円分の<br>ポイントをプレゼント。',
-    background: '/static/img/trial_bg02@2x.png',
-  },
-];
+const Title = styled.h2`
+  color: #505050;
+  font-size: 32px;
+  line-height: 1.4;
+  padding: 45px 30px;
+  span {
+    color: ${({ theme }) => theme.colors.dark};
+  }
+  @media ${device.TAB} {
+    font-size: 36px;
+    display: block;
+    text-align: center;
+    padding: 120px 0;
+  }
+`;
 
-// TOKUTEN.propTypes = {
-//   text: PropTypes.string.isRequired,
-//   background: PropTypes.string,
-// };
+const Br = styled.br`
+  @media ${device.TAB} {
+    display: none;
+  }
+`;
+
 export default Trial;

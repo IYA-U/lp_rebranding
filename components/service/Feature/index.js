@@ -20,17 +20,17 @@ const Feature = ({ title }) => (
         },
         {
           numStr: '02',
-          title: '130,000本以上が見放題！<br/>最新レンタル作品も充実。',
+          title: '動画も書籍も<br/>U-NEXTひとつでOK。',
           filter: 'brightness(110%)',
         },
         {
           numStr: '03',
-          title: '130,000本以上が見放題！<br/>最新レンタル作品も充実。',
+          title: '毎月もらえる<br/>1,200ポイントでお得に。',
           filter: 'brightness(100%)',
         },
         {
           numStr: '04',
-          title: '130,000本以上が見放題！<br/>最新レンタル作品も充実。',
+          title: '解約は<br/>いつでも簡単。',
           filter: 'brightness(90%)',
         },
       ].map((params) => (
