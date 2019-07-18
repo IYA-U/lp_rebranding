@@ -39,6 +39,18 @@ const withLayout = (ComposedComponent) => class extends React.Component {
           [key]: value,
         });
       }
+      this.setState({
+        colors: {
+          white: '#fff',
+          bright: params.get('colorBright')
+            ? `#${params.get('colorBright')}`
+            : '#EFCB05',
+          dark: params.get('colorDark')
+            ? `#${params.get('colorDark')}`
+            : '#4E00AA',
+          black: '#000000',
+        },
+      });
 
       this.updateWindowSize();
       window.addEventListener('resize', () => {
