@@ -48,7 +48,9 @@ const Wrap = styled.div`
 
 const Main = styled.div`
   padding: 35px 28px;
-
+  @media ${device.TAB} {
+    padding: 40px 40px 50px;
+  }
   h3 {
     font-size: 50px;
     font-weight: bold;
