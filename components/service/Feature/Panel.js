@@ -63,7 +63,6 @@ const Main = styled.div`
 
 const Toggle = styled(animated.div)`
   overflow: hidden;
-  border: 1px solid gray;
   div {
     padding: 30px;
   }
