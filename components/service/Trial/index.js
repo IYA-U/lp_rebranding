@@ -43,7 +43,6 @@ const Wrap = styled.div`
   @media ${device.PC} {
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 80px;
   }
 `;
 

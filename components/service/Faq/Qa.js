@@ -42,7 +42,7 @@ const DefTerm = styled.dt`
   position: relative;
   vertical-align: middle;
   @media ${device.TAB} {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 3rem;
     padding: 3.8rem 6rem 3.4rem 6rem;
   }
@@ -65,7 +65,7 @@ const DefDes = styled.dd`
   @media ${device.TAB} {
     margin-top: 0.4rem;
     padding: 3.2rem 6rem;
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     line-height: 2;
   }
 `;
@@ -81,8 +81,8 @@ const Arrow = styled.span`
   top: 0;
   width: 15px;
   @media ${device.TAB} {
-    width: 30px;
-    height: 4px;
+    width: 18px;
+    height: 2px;
   }
   &:after {
     background-color: #505050;
@@ -97,8 +97,8 @@ const Arrow = styled.span`
     top: 0;
     width: 2px;
     @media ${device.TAB} {
-      width: 4px;
-      height: 30px;
+      width: 2px;
+      height: 18px;
     }
   }
 `;

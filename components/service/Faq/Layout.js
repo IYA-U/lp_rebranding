@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
 
 export const FaqBody = styled.div`
-  background-color: #f7f7f7;
   color: #505050;
   height: auto;
   position: relative;
@@ -14,19 +13,19 @@ export const FaqBody = styled.div`
   }
 `;
 
-export const Title = styled.h3`
-  font-size: 3.2rem;
-  font-weight: 300;
-  letter-spacing: 0.6rem;
-  line-height: 3.2rem;
-  padding: 4.5rem 3.2rem 3.5rem 3.2rem;
-  text-align: left;
+export const Title = styled.h2`
+  color: #505050;
+  font-size: 32px;
+  line-height: 1.4;
+  padding: 45px 30px;
+  span {
+    color: ${({ theme }) => theme.colors.dark};
+  }
   @media ${device.TAB} {
+    font-size: 36px;
+    display: block;
     text-align: center;
-    font-size: 6.4rem;
-    line-height: 6.4rem;
-    font-weight: 400;
-    padding: 8rem 0 7rem 0;
+    padding: 120px 0;
   }
 `;
 
