@@ -7,17 +7,15 @@ const Titles = () => (
     <picture>
       <source
         media="(min-width: 640px)"
-        srcset="/static/img/service/titles/titles--pc.jpg"
+        srcSet="/static/img/service/titles/titles--pc.jpg"
       />
       <source
         media="(max-width: 639px)"
-        srcset="/static/img/service/titles/titles--sp.jpg"
+        srcSet="/static/img/service/titles/titles--sp.jpg"
       />
       <img
-        class="w-100"
         src="/static/img/service/titles/titles--pc.jpg"
-        alt=""
-      />
+        alt="" />
     </picture>
   </Wrap>
 );

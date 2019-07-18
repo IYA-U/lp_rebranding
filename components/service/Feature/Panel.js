@@ -8,7 +8,6 @@ import { Config } from '../../Layout/withLayout';
 const Panel = ({ numStr, title, filter }) => {
   const config = useContext(Config);
   const initialAccordionState = config.device.isPc;
-  console.log(config.device.isPc);
   const [isOpen, setOpen] = useState(initialAccordionState);
   const animation = useSpring({
     height: isOpen ? '200px' : '0px',

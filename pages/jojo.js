@@ -1,19 +1,26 @@
 import React from 'react';
 import withLayout from '../components/Layout/withLayout';
+import KeyvisualLayout from '../components/keyvisual/Common/Layout';
+import KeyvisualPatternA from '../components/keyvisual/PatternA';
 import Thumbnails from '../components/tetris/Thumbnails';
 import Trailer from '../components/tetris/Trailer';
 import Cards from '../components/tetris/Cards';
 import PictureFullWidth from '../components/tetris/PictureFullWidth';
 import Text from '../components/tetris/Text';
+import Device from '../components/service/Device';
 import Book from '../components/tetris/Book';
 import Spec from '../components/service/Spec';
+import Titles from '../components/service/Titles';
 import Trial from '../components/service/Trial';
 import Faq from '../components/service/Faq';
 import Feature from '../components/service/Feature';
 import Footer from '../components/common/Footer';
 
 const Jojo = () => (
-  <div>
+  <>
+    <KeyvisualLayout>
+      <KeyvisualPatternA></KeyvisualPatternA>
+    </KeyvisualLayout>
     <Text
       lead=""
       hdline="青年ジョルノ・ジョバァーナ、街から麻薬を排除するという夢があった。"
@@ -177,14 +184,13 @@ const Jojo = () => (
       alt="ジョジョのなんとかの冒険"
     />
     <Feature />
-    <div>共通パーツデバイス画像を入れるところ</div>
+    <Device />
     <Spec />
-    <div>共通パーツピクチャーを入れるところ</div>
+    <Titles />
     <Trial />
     <Faq />
-    <div>コピーライトを入れるところ</div>
     <Footer />
-  </div>
+  </>
 );
 
 export default withLayout(Jojo);

@@ -4,12 +4,11 @@ const PictureFullWidth = ({ srcPc, srcSp, alt }) => (
   <picture>
     <source
       media="(min-width: 640px)"
-      srcset={srcPc} />
+      srcSet={srcPc} />
     <source
       media="(max-width: 639px)"
-      srcset={srcSp} />
+      srcSet={srcSp} />
     <img
-      class="w-100"
       src={srcPc}
       alt={alt} />
   </picture>
