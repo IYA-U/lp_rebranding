@@ -75,7 +75,6 @@ const Tetris = () => (
           paragraph="極限に追い込まれた人間の心理を描いたヒューマンドラマ。現代社会の安全が破壊され秩序を失った世界で、生存者たちは確固たる人間性を保てるのか？そして生きるための「愛、強さ、責任感、自制心」とは？"
         />
       </PatternWrap>
-
       <PatternWrap name="Cards">
         <SubPatternWrap name="奇数">
           <Cards
@@ -153,7 +152,6 @@ const Tetris = () => (
           />
         </SubPatternWrap>
       </PatternWrap>
-
       <PatternWrap name="HorizontalCard">
         <SubPatternWrap name="5:5">
           <HorizontalCard
@@ -187,7 +185,20 @@ const Tetris = () => (
       <PatternWrap name="Thumbnails">
         <SubPatternWrap name="奇数">
           <Thumbnails
+            title="今までのジョジョ作品は、<br />ここにある"
             thumbnails={[
+              {
+                text: 'フロリダ・プロジェクト 真夏の魔法',
+                thumbnail:
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=jpeg&output-quality=60',
+                sid: 'SID0036791',
+              },
+              {
+                text: 'フロリダ・プロジェクト 真夏の魔法',
+                thumbnail:
+                  'https://imgc.nxtv.jp/img/info/eps/00209/ED00209186.png?output-format=jpeg&output-quality=60',
+                sid: 'SID0036791',
+              },
               {
                 text: 'フロリダ・プロジェクト 真夏の魔法',
                 thumbnail:
@@ -212,6 +223,18 @@ const Tetris = () => (
         <SubPatternWrap name="偶数">
           <Thumbnails
             thumbnails={[
+              {
+                text: 'gifted／ギフテッド',
+                thumbnail:
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=jpeg&output-quality=60',
+                sid: 'SID0034172',
+              },
+              {
+                text: 'gifted／ギフテッド',
+                thumbnail:
+                  'https://imgc.nxtv.jp/img/info/eps/00192/ED00192928.png?output-format=jpeg&output-quality=60',
+                sid: 'SID0034172',
+              },
               {
                 text: 'gifted／ギフテッド',
                 thumbnail:

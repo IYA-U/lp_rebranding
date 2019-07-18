@@ -20,11 +20,11 @@ const CardImg = styled.img`
 const CardTextWrap = styled.div`
   background-color: ${({ theme }) => theme.colors.dark};
   color: white;
-  height: 55px;
+  height: 50px;
   position: relative;
   width: 100%;
   @media ${device.PC} {
-    height: 80px;
+    height: 60px;
   }
   &:before {
     border: 0px;
@@ -42,14 +42,14 @@ const CardTextWrap = styled.div`
     z-index: 2;
     @media ${device.PC} {
       right: 6%;
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
     }
   }
   &:after {
     background-color: ${({ theme }) => theme.colors.dark};
     content: '';
-    filter: brightness(130%);
+    filter: brightness(120%);
     height: 100%;
     position: absolute;
     right: 0;
@@ -63,9 +63,9 @@ const CardTextWrap = styled.div`
 `;
 const CardText = styled.p`
   font-size: 14px;
-  line-height: 55px;
+  line-height: 50px;
   overflow: hidden;
-  padding: 0 55px 0 5px;
+  padding: 0 55px 0 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
@@ -77,8 +77,8 @@ const CardText = styled.p`
 
   @media ${device.PC} {
     font-size: 18px;
-    padding: 0 80px 0 30px;
-    line-height: 80px;
+    padding: 0 80px 0 22px;
+    line-height: 60px;
     a {
       font-size: 18px;
     }
@@ -86,10 +86,15 @@ const CardText = styled.p`
 `;
 
 const CardLink = styled.a`
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
   color: #000000;
   display: block;
-  margin: 20px 10px;
+  margin: 30px 10px 0;
   text-decoration: none;
+  @media ${device.PC} {
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
+    margin: 60px 10px 0;
+  }
 
   &:hover {
     color: #000000;
