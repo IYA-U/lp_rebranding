@@ -13,6 +13,7 @@ import {
   MoreWrap,
   TogglerWrap,
   Arrow,
+  Br,
 } from './Layout';
 
 const Spec = () => (
@@ -21,7 +22,9 @@ const Spec = () => (
       <Row>
         <Col xs="12">
           <SpecBody>
-            <Title>サービススペックと利用料金</Title>
+            <Title>
+              サービススペックと<Br></Br>利用料金
+            </Title>
             <DefaultWrap>
               <SpecWrap>
                 {constants.map((list, index) => (
