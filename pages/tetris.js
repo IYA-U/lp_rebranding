@@ -5,6 +5,7 @@ import SubPatternWrap from '../components/tetris/common/SubPatternWrap';
 import Example from '../components/tetris/Example';
 import Text from '../components/tetris/Text';
 import Picture from '../components/tetris/Picture';
+import PictureFullWidth from '../components/tetris/PictureFullWidth';
 import PictureText from '../components/tetris/PictureText';
 import Cards from '../components/tetris/Cards';
 import Thumbnails from '../components/tetris/Thumbnails';
@@ -59,7 +60,13 @@ const Tetris = () => (
         />
       </SubPatternWrap>
     </PatternWrap>
-
+    <PatternWrap name="PictureFullWidth">
+      <PictureFullWidth
+        srcPc="https://www.video.unext.jp/static/img/page/amecomi/eyecatch--pc.jpg"
+        srcSp="https://www.video.unext.jp/static/img/page/amecomi/eyecatch--sp.jpg"
+        alt="おるとテキストだよ"
+      ></PictureFullWidth>
+    </PatternWrap>
     <PatternWrap name="PictureText">
       <PictureText
         picture="//imgc.nxtv.jp/img/info/titspot/00020/SID0020051_fwxga.png?output-format=jpeg&output-quality=60"
