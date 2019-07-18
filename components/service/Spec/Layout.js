@@ -1,42 +1,44 @@
-import React from 'react';
 import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
 
-export const SpecBody = styled.div `
+export const SpecBody = styled.div`
   background-color: #fff;
   color: #505050;
   width: 100%;
-  margin:-top: 4rem;
-  margin-bottom: 6rem;
   @media ${device.TAB} {
     max-width: 1152px;
-    margin: 8rem auto 12rem auto;
+    margin: 0 auto;
   }
 `;
 
-export const Title = styled.h3 `
-  font-size: 3.2rem;
-  font-weight: 400;
-  letter-spacing: 0.4rem;
-  padding: 0 3rem;
-  text-align: left;
+export const Title = styled.h2`
+  color: #505050;
+  font-size: 32px;
+  line-height: 1.4;
+  padding: 45px 30px;
+  span {
+    color: ${({ theme }) => theme.colors.dark};
+  }
   @media ${device.TAB} {
+    font-size: 36px;
+    display: block;
     text-align: center;
-    font-size: 6.4rem;
-    line-height: 6.4rem;
-    letter-spacing: 0.6rem;
+    padding: 120px 0;
   }
 `;
 
-export const SpecWrap = styled.ul `
-  margin: 4rem auto 0 auto;
-  padding: 0;
+export const Br = styled.br`
   @media ${device.TAB} {
-    margin: 8rem auto 0 auto;
+    display: none;
   }
 `;
 
-export const DefaultWrap = styled.div `
+export const SpecWrap = styled.ul`
+  margin: 0rem auto 0 auto;
+  padding: 0;
+`;
+
+export const DefaultWrap = styled.div`
   & > ul {
     & > li:nth-child(n + 6) {
       display: none;
@@ -47,7 +49,7 @@ export const DefaultWrap = styled.div `
   }
 `;
 
-export const MoreWrap = styled.div `
+export const MoreWrap = styled.div`
   & > ul {
     @media ${device.TAB} {
       display: none;
@@ -58,7 +60,7 @@ export const MoreWrap = styled.div `
   }
 `;
 
-export const TogglerWrap = styled.div `
+export const TogglerWrap = styled.div`
   display: block;
   font-weight: bold;
   margin: 2.4rem auto 0 auto;
@@ -76,7 +78,7 @@ export const TogglerWrap = styled.div `
   }
 `;
 
-export const Arrow = styled.span `
+export const Arrow = styled.span`
   background-color: #505050;
   bottom: auto;
   display: inline-block;

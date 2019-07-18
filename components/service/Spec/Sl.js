@@ -43,7 +43,7 @@ const DefList = styled.dl`
     }
   }
   @media ${device.TAB} {
-    font-size: 3rem;
+    font-size: 20px;
     line-height: 3rem;
   }
 `;
