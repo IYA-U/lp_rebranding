@@ -7,49 +7,85 @@ const Card = ({
   img, lead, title, paragraph,
 }) => (
   <Wrap>
-    <img src={img} />
+    <ImgBox>
+      <img src={img} />
+    </ImgBox>
     <TextArea>
       <h4>{lead}</h4>
-      <h3>{title}</h3>
+      <h3 dangerouslySetInnerHTML={{ __html: title }} />
       <p>{paragraph}</p>
     </TextArea>
   </Wrap>
 );
 
 const Wrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
-  margin-top: 20px;
-  /* box-shadow: 10px 10px 15px 3px rgba(0, 0, 0, 0.4); */
+  background-color: ${({ theme }) => theme.colors.bright};
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
   @media ${device.TAB} {
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
   }
   @media ${device.PC} {
-    margin-top: 80px;
+    margin-top: 60px;
     margin-left: 6px;
     margin-right: 6px;
   }
 `;
 
+const ImgBox = styled.div`
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+  & > img {
+    height: auto;
+    left: 50%;
+    max-height: initial;
+    max-width: 110%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    @media ${device.TAB} {
+    }
+    @media ${device.PC} {
+    }
+  }
+`;
+
 const TextArea = styled.div`
-  padding: 16px 20px;
+  color: ${({ theme }) => theme.colors.black};
+  padding: 30px 20px;
+  @media ${device.TAB} {
+    padding: 40px 23px;
+    min-height: 360px;
+  }
   @media ${device.PC} {
-    padding: 20px 26px;
+    padding: 40px 23px;
+    min-height: 370px;
   }
 
   h4 {
     font-weight: bold;
     line-height: 1;
+    margin-bottom: 10px;
   }
   h3 {
-    margin-top: 10px;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     line-height: 1;
+    line-height: 1.5;
+    @media ${device.PC} {
+      font-size: 2.6rem;
+    }
   }
   p {
-    margin-top: 10px;
+    font-weight: 400;
+    line-height: 1.8;
+    margin-top: 20px;
   }
 `;
 
