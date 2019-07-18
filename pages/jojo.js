@@ -10,6 +10,7 @@ import Spec from '../components/service/Spec';
 import Trial from '../components/service/Trial';
 import Faq from '../components/service/Faq';
 import Feature from '../components/service/Feature';
+import Footer from '../components/common/Footer';
 
 const Jojo = () => (
   <div>
@@ -181,6 +182,8 @@ const Jojo = () => (
     <div>共通パーツピクチャーを入れるところ</div>
     <Trial />
     <Faq />
+    <div>コピーライトを入れるところ</div>
+    <Footer />
   </div>
 );
 
