@@ -4,67 +4,52 @@ import { Container, Row, Col } from 'reactstrap';
 import device from '../../styleConfigs/breakPoints';
 import SubPatternWrap from './common/SubPatternWrap';
 
-const Text = ({ lead, hdline, paragraph }) => (
-  <Container>
-    <Row>
-      <Col xs="12">
-        <Wrap>
-          {lead && <Lead>{lead}</Lead>}
-          {hdline && <Hdline>{hdline}</Hdline>}
-          {paragraph && (
-            <Paragraph dangerouslySetInnerHTML={{ __html: paragraph }} />
-          )}
-        </Wrap>
-      </Col>
-    </Row>
-  </Container>
+const Text = ({ hdline, paragraph }) => (
+  <Wrap>
+    {hdline && <Hdline dangerouslySetInnerHTML={{ __html: hdline }} />}
+    {paragraph && <Paragraph dangerouslySetInnerHTML={{ __html: paragraph }} />}
+  </Wrap>
 );
 
 const Hdline = styled.h2`
-  font-size: 32px;
+  color: ${({ theme }) => theme.colors.bright};
+  font-size: 28px;
   font-weight: bold;
   line-height: 1.4;
-  margin: 20px auto;
-  text-align: center;
+  margin: 0 auto;
+  text-align: left;
 
   @media ${device.TAB} {
-    margin-top: 20px;
-    font-size: 45px;
+    font-size: 32px;
+    text-align: center;
   }
   @media ${device.PC} {
-    font-size: 47px;
-    margin: 40px auto;
-  }
-`;
-
-const Lead = styled.h3`
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 1.4;
-  margin: 20px auto;
-  text-align: center;
-  @media ${device.PC} {
-    margin: 40px auto;
+    font-size: 44px;
   }
 `;
 
 const Paragraph = styled.p`
+  color: ${({ theme }) => theme.colors.white};
   font-size: 16px;
-  margin: 20px auto;
+  margin: 40px auto 0 auto;
   text-align: justify;
+  @media ${device.TAB} {
+    margin: 40px auto 0 auto;
+    max-width: 640px;
+  }
   @media ${device.PC} {
-    margin: 40px auto;
+    margin: 80px auto 0 auto;
+    max-width: 640px;
   }
 `;
 
 const Wrap = styled.div`
-  margin: 60px 0 20px;
-  padding: 0 20px;
-  @media ${device.TAB} {
-    margin: 90px 0 20px;
-  }
+  background-color: ${({ theme }) => theme.colors.black};
+  opacity: 0.7;
+  padding: 45px 20px 80px;
+
   @media ${device.PC} {
-    margin: 120px 0 40px;
+    padding: 300px 0 300px;
   }
 `;
 
