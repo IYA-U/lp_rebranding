@@ -7,7 +7,10 @@ const withLayout = (ComposedComponent) => class extends React.Component {
     super(props);
     this.state = {
       colors: {
-        primary: '#00D0B0',
+        white: '#fff',
+        bright: '#EFCB05',
+        dark: '#4E00AA',
+        black: '#000000',
       },
       device: {
         windowHeight: 0,
@@ -57,7 +60,7 @@ const withLayout = (ComposedComponent) => class extends React.Component {
       return (
         <Config.Provider value={this.state}>
           <ThemeProvider theme={this.state}>
-            <ComposedComponent {...this.props} />
+            <ComposedComponent />
           </ThemeProvider>
         </Config.Provider>
       );

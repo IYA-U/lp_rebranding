@@ -2,27 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
 
-const Trial = () => {
-  return (
-    <Wrap>
-      <Title>
+const Trial = () => (
+  <Wrap>
+    <Title>
         無料トライアルの
-        <br />
+      <br />
         2つの特典
-      </Title>
-      <TokurenWrap>
-        {TOKUTEN.map(data => (
-          <TokurenLi background={data.background}>
-            <Text dangerouslySetInnerHTML={{ __html: data.text }} />
-          </TokurenLi>
-        ))}
-      </TokurenWrap>
-      <TextExe>
+    </Title>
+    <TokurenWrap>
+      {TOKUTEN.map((data) => (
+        <TokurenLi background={data.background}>
+          <Text dangerouslySetInnerHTML={{ __html: data.text }} />
+        </TokurenLi>
+      ))}
+    </TokurenWrap>
+    <TextExe>
         U-NEXTがお届けするサービスを、31⽇間ゆっくりとお試しください。
-      </TextExe>
-    </Wrap>
-  );
-};
+    </TextExe>
+  </Wrap>
+);
 
 const Wrap = styled.div`
   background-color: #15aa93;
@@ -38,8 +36,8 @@ const Wrap = styled.div`
 const Title = styled.h3`
   color: #ffffff;
   font-size: 32px;
-  padding-top: 40px;
   padding-left: 32px;
+  padding-top: 40px;
   text-align: left;
   @media ${device.PC} {
     font-size: 64px;
@@ -55,19 +53,19 @@ const Title = styled.h3`
 `;
 
 const TokurenWrap = styled.ul`
-  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 40px;
   @media ${device.PC} {
     margin: 40px 60px 0 60px;
   }
 `;
 
 const TokurenLi = styled.li`
-  width: 50%;
-  position: relative;
   background-image: url(${({ background }) => background});
   background-size: cover;
+  position: relative;
+  width: 50%;
 
   @media ${device.PC} {
     width: 100%;
@@ -84,8 +82,8 @@ const TokurenLi = styled.li`
 `;
 
 const Text = styled.p`
-  font-size: 16px;
   color: #ffffff;
+  font-size: 16px;
   margin: 40px 32px;
   text-align: justfy;
   @media ${device.TAB} {
@@ -108,8 +106,8 @@ const Text = styled.p`
 `;
 
 const TextExe = styled.p`
-  font-size: 16px;
   color: #ffffff;
+  font-size: 16px;
   margin: 20px 32px 0 32px;
   text-align: justfy;
   @media ${device.PC} {

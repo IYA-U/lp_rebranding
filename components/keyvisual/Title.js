@@ -7,11 +7,11 @@ class Title extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stageData: null,
+      stageData: undefined,
     };
   }
 
-  getTitleStageData = () => {
+  getTitleStageData = async () => {
     const params = new URLSearchParams(window.location.search);
     const sid = params.get('sid');
 
@@ -30,36 +30,32 @@ class Title extends Component {
       data: { title_code: sid },
     };
 
-    return fetch('https://napi.unext.jp/1/cmsuser/stage', {
+    const apiResponse = await fetch('https://napi.unext.jp/1/cmsuser/stage', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'User-Agent': window.navigator.userAgent,
       },
       body: JSON.stringify(body),
-    })
-      .then((response) => {
-        if (response.status !== 200) {
-          console.log('APIがエラー返してきた');
-          throw new Error();
-        }
-        return response.json();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    });
+
+    if (!apiResponse.ok) {
+      throw new Error('APIがエラー返してきた');
+    }
+    console.log(apiResponse);
+    return apiResponse.json();
   };
 
-  componentDidMount() {
-    this.getTitleStageData().then((res) => {
-      this.setState({
-        stageData: res.data,
-      });
+  async componentDidMount() {
+    const apiResponse = await this.getTitleStageData();
+    this.setState({
+      stageData: apiResponse.data,
     });
   }
 
   render() {
     const { stageData } = this.state;
+    console.log({ stageData });
     const wrapConfig = {
       image: stageData ? stageData.thumbnail.tspt_fwxga : null,
     };
