@@ -5,27 +5,25 @@ import { FaqBody, Title, FaqWrap } from './Layout';
 import Qa from './Qa';
 import constants from './constants';
 
-const Faq = () => {
-  console.log('！！FAQの！！WIP！！だよ！！');
-
-  return (
-    <>
-      <Container>
-        <Row>
-          <Col xs="12">
-            <FaqBody>
-              <Title>よくある質問</Title>
-              <FaqWrap>
-                {constants.map((qa) => (
-                  <Qa data={qa} />
-                ))}
-              </FaqWrap>
-            </FaqBody>
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
-};
+const Faq = () => (
+  <>
+    <Container>
+      <Row>
+        <Col xs="12">
+          <FaqBody>
+            <Title>よくある質問</Title>
+            <FaqWrap>
+              {constants.map((qa, index) => (
+                <Qa
+                  data={qa}
+                  key={index} />
+              ))}
+            </FaqWrap>
+          </FaqBody>
+        </Col>
+      </Row>
+    </Container>
+  </>
+);
 
 export default Faq;

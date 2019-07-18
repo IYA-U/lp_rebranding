@@ -2,24 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
 
-const Sl = (props) => {
-  console.log(props);
-
-  return (
-    <>
-      <SpecList>
-        <DefList>
-          <DefTerm className={props.data.hasunderlined ? 'underline' : null}>
-            <p>{props.data.spec}</p>
-          </DefTerm>
-          <DefDes className={props.data.hasunderlined ? 'underline' : null}>
-            <p>{props.data.detail}</p>
-          </DefDes>
-        </DefList>
-      </SpecList>
-    </>
-  );
-};
+const Sl = (props) => (
+  <SpecList>
+    <DefList>
+      <DefTerm className={props.data.hasunderlined ? 'underline' : null}>
+        <p>{props.data.spec}</p>
+      </DefTerm>
+      <DefDes className={props.data.hasunderlined ? 'underline' : null}>
+        <p>{props.data.detail}</p>
+      </DefDes>
+    </DefList>
+  </SpecList>
+);
 
 const SpecList = styled.li`
   padding: 3.2rem 3rem;

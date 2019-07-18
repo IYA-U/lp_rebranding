@@ -3,24 +3,19 @@ import styled from 'styled-components';
 import { UncontrolledCollapse } from 'reactstrap';
 import device from '../../../styleConfigs/breakPoints';
 
-const Qa = (props) => {
-  console.log(props);
-  return (
-    <>
-      <FaqList>
-        <DefList>
-          <DefTerm id={`toggler${props.data.no}`}>
-            {props.data.term}
-            <Arrow></Arrow>
-          </DefTerm>
-          <UncontrolledCollapse toggler={`#toggler${props.data.no}`}>
-            <DefDes>{props.data.description}</DefDes>
-          </UncontrolledCollapse>
-        </DefList>
-      </FaqList>
-    </>
-  );
-};
+const Qa = (props) => (
+  <FaqList>
+    <DefList>
+      <DefTerm id={`toggler${props.data.no}`}>
+        {props.data.term}
+        <Arrow></Arrow>
+      </DefTerm>
+      <UncontrolledCollapse toggler={`#toggler${props.data.no}`}>
+        <DefDes>{props.data.description}</DefDes>
+      </UncontrolledCollapse>
+    </DefList>
+  </FaqList>
+);
 
 const FaqList = styled.li`
   height: auto;

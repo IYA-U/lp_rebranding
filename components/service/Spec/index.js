@@ -15,44 +15,44 @@ import {
   Arrow,
 } from './Layout';
 
-const Spec = () => {
-  console.log('WIP');
-
-  return (
-    <>
-      <Container>
-        <Row>
-          <Col xs="12">
-            <SpecBody>
-              <Title>サービススペックと利用料金</Title>
-              <DefaultWrap>
-                <SpecWrap>
-                  {constants.map((list) => (
-                    <Sl data={list} />
-                  ))}
-                </SpecWrap>
-              </DefaultWrap>
-              {/* ▼スマホのみ表示 accordion */}
-              <TogglerWrap>
-                <p id="toggler">
-                  もっと見る<Arrow></Arrow>
-                </p>
-                <UncontrolledCollapse toggler="#toggler">
-                  <MoreWrap>
-                    <SpecWrap>
-                      {constants.map((list) => (
-                        <Sl data={list} />
-                      ))}
-                    </SpecWrap>
-                  </MoreWrap>
-                </UncontrolledCollapse>
-              </TogglerWrap>
-              {/* ▲スマホのみ表示 accordion */}
-            </SpecBody>
-          </Col>
-        </Row>
-      </Container>
-    </>
-  );
-};
+const Spec = () => (
+  <>
+    <Container>
+      <Row>
+        <Col xs="12">
+          <SpecBody>
+            <Title>サービススペックと利用料金</Title>
+            <DefaultWrap>
+              <SpecWrap>
+                {constants.map((list, index) => (
+                  <Sl
+                    data={list}
+                    key={index} />
+                ))}
+              </SpecWrap>
+            </DefaultWrap>
+            {/* ▼スマホのみ表示 accordion */}
+            <TogglerWrap>
+              <p id="toggler">
+                もっと見る<Arrow></Arrow>
+              </p>
+              <UncontrolledCollapse toggler="#toggler">
+                <MoreWrap>
+                  <SpecWrap>
+                    {constants.map((list, index) => (
+                      <Sl
+                        data={list}
+                        key={index} />
+                    ))}
+                  </SpecWrap>
+                </MoreWrap>
+              </UncontrolledCollapse>
+            </TogglerWrap>
+            {/* ▲スマホのみ表示 accordion */}
+          </SpecBody>
+        </Col>
+      </Row>
+    </Container>
+  </>
+);
 export default Spec;
