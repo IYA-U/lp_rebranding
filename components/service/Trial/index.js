@@ -5,19 +5,21 @@ import device from '../../../styleConfigs/breakPoints';
 const Trial = () => (
   <Wrap>
     <Title>
-        無料トライアルの
+      無料トライアルの
       <br />
-        2つの特典
+      2つの特典
     </Title>
     <TokurenWrap>
-      {TOKUTEN.map((data) => (
-        <TokurenLi background={data.background}>
+      {TOKUTEN.map((data, index) => (
+        <TokurenLi
+          background={data.background}
+          key={index}>
           <Text dangerouslySetInnerHTML={{ __html: data.text }} />
         </TokurenLi>
       ))}
     </TokurenWrap>
     <TextExe>
-        U-NEXTがお届けするサービスを、31⽇間ゆっくりとお試しください。
+      U-NEXTがお届けするサービスを、31⽇間ゆっくりとお試しください。
     </TextExe>
   </Wrap>
 );
