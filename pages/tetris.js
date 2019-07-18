@@ -11,6 +11,7 @@ import Cards from '../components/tetris/Cards';
 import Thumbnails from '../components/tetris/Thumbnails';
 import HorizontalCard from '../components/tetris/HorizontalCard';
 import Trailer from '../components/tetris/Trailer';
+import Book from '../components/tetris/Book';
 
 const Tetris = () => (
   <>
@@ -223,6 +224,60 @@ const Tetris = () => (
           is64
           isLeft
         />
+      </SubPatternWrap>
+    </PatternWrap>
+    <PatternWrap name="Books">
+      <SubPatternWrap name="標準">
+        <Book
+          hdline="動画だけじゃない、<br/>ジョジョ漫画全巻を読むなら、U-NEXT"
+          books={{
+            aspectRatio: 'sss',
+            books: [
+              {
+                img:
+                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
+                link:
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
+                alt: 'ジョジョの奇妙な冒険 第1部',
+              },
+              {
+                img:
+                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
+                link:
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
+                alt: 'ジョジョの奇妙な冒険 第1部',
+              },
+              {
+                img:
+                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
+                link:
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
+                alt: 'ジョジョの奇妙な冒険 第1部',
+              },
+              {
+                img:
+                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
+                link:
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
+                alt: 'ジョジョの奇妙な冒険 第1部',
+              },
+              {
+                img:
+                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
+                link:
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
+                alt: 'ジョジョの奇妙な冒険 第1部',
+              },
+              {
+                img:
+                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
+                link:
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
+                alt: 'ジョジョの奇妙な冒険 第1部',
+              },
+            ],
+          }}
+        ></Book>
       </SubPatternWrap>
     </PatternWrap>
     <PatternWrap name="Thumbnails">
