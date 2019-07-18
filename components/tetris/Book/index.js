@@ -4,11 +4,11 @@ import { Container, Row, Col } from 'reactstrap';
 import Book from './Book';
 import device from '../../../styleConfigs/breakPoints';
 
-const Cards = ({ title, books }) => (
+const Books = ({ hdline, books }) => (
   <Wrap>
     <Container>
       <Row>
-        <Title dangerouslySetInnerHTML={{ __html: title }} />
+        <Title dangerouslySetInnerHTML={{ __html: hdline }} />
       </Row>
       <Row>
         {books.books.map((book, index) => (
@@ -28,14 +28,14 @@ const Cards = ({ title, books }) => (
 
 const Wrap = styled.div`
   background-color: ${({ theme }) => theme.colors.bright};
-  padding: 90px 0 70px;
+  padding: 90px 8px;
   @media ${device.PC} {
-    padding: 200px 0 180px;
+    padding: 180px 0;
   }
 `;
 
 const Title = styled.h2`
-  color: ${({ theme }) => theme.colors.bright};
+  color: ${({ theme }) => theme.colors.dark};
   font-size: 2.8rem;
   font-weight: bold;
   letter-spacing: 0.2rem;
@@ -48,6 +48,9 @@ const Title = styled.h2`
 
 const BookWrap = styled.div`
   margin: 30px 5px 0;
+  @media ${device.PC} {
+    margin: 60px 10px 0;
+  }
 `;
 
-export default Cards;
+export default Books;

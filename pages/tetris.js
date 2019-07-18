@@ -231,56 +231,42 @@ const Tetris = () => (
                 img:
                   'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
                 link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
                 alt: 'ジョジョの奇妙な冒険 第1部',
               },
               {
                 img:
                   'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
                 link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
                 alt: 'ジョジョの奇妙な冒険 第1部',
               },
               {
                 img:
                   'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
                 link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
                 alt: 'ジョジョの奇妙な冒険 第1部',
               },
               {
                 img:
                   'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
                 link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
                 alt: 'ジョジョの奇妙な冒険 第1部',
               },
               {
                 img:
                   'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
                 link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
                 alt: 'ジョジョの奇妙な冒険 第1部',
               },
               {
                 img:
                   'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
                 link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
-                alt: 'ジョジョの奇妙な冒険 第1部',
-              },
-              {
-                img:
-                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
-                link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
-                alt: 'ジョジョの奇妙な冒険 第1部',
-              },
-              {
-                img:
-                  'https://metac.nxtv.jp/img/bookimg/pubridge/00001860/BT000018607300100101.jpg',
-                link:
-                  'https://video.unext.jp/book/title/BSD0000026894/BID0000040335',
+                  'https://www.video.unext.jp/book_title/BSD0000026894/BID0000040335',
                 alt: 'ジョジョの奇妙な冒険 第1部',
               },
             ],
