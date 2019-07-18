@@ -11,12 +11,9 @@ const Trailer = ({ texts, video }) => {
       <Container>
         <WrapText>
           <TextArea>
-            <HdlineText>トレーラー</HdlineText>
-            <Text>
-              2010年の放送以降、世界中を熱狂の渦に巻き込んだ『ウォーキング・デッド』もいよいよシーズン9！前シーズンから18ヶ月が経過した世界が描かれることも発表されており、新キャラクターや懐かしのキャラクターの登場も楽しみだ。U-NEXTでは過去シーズンが見放題なのはもちろん、シーズン9を日本最速で楽しめるFOXチャンネルのリアルタイム配信もご用意！
-            </Text>
+            {texts.hdline && <HdlineText>{texts.hdline}</HdlineText>}
+            {texts.paragraph && <Text>{texts.paragraph}</Text>}
           </TextArea>
-
           <VideoWrapText>
             <Video {...video} />
           </VideoWrapText>
@@ -41,13 +38,9 @@ const Wrap = styled.div`
 `;
 
 const WrapText = styled.div`
-  padding: 60px 20px;
+  padding: 90px 20px;
   @media ${device.PC} {
-    padding: 60px 0;
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    padding: 190px 0;
   }
 `;
 
@@ -55,26 +48,23 @@ const VideoWrapText = styled.div`
   margin-top: 20px;
   @media ${device.PC} {
     margin-top: 0;
-    width: 50%;
+    max-width: 1200px;
   }
 `;
 
 const HdlineText = styled.h2`
-  font-size: 32px;
+  color: ${({ theme }) => theme.colors.dark};
+  font-size: 28px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: center;
   @media ${device.TAB} {
-    text-align: left;
     font-size: 45px;
+    margin-bottom: 60px;
   }
 `;
 
-const TextArea = styled.div`
-  @media ${device.PC} {
-    width: calc(50% - 40px);
-  }
-`;
+const TextArea = styled.div``;
 
 const Text = styled.p``;
 
