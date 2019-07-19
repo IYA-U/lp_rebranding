@@ -9,7 +9,7 @@ const Img = styled.img`
   position: absolute;
   top: 0;
   width: 60px;
-  z-index: 10;
+  z-index: 11;
   @media ${device.TAB} {
     width: 76px;
   }
