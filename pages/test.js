@@ -9,7 +9,7 @@ import withLayout, { Config } from '../components/Layout/withLayout';
 import Spec from '../components/service/Spec--animated';
 
 const test = () => (
-  <>
+  <div>
     <KeyvisualLayout>
       <AnimatedKeyvisual />
     </KeyvisualLayout>
@@ -18,7 +18,7 @@ const test = () => (
       once>
       <Spec />
     </TrackVisibility>
-  </>
+  </div>
 );
 
 export default withLayout(test);
