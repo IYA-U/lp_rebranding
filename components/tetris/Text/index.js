@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
-import device from '../../styleConfigs/breakPoints';
-import SubPatternWrap from './common/SubPatternWrap';
+import withColorProps from '../../hoc/withColorProps';
+import device from '../../../styleConfigs/breakPoints';
+import COLOR_PATTENRS from './COLOR_PATTERNS';
 
 const Text = ({ hdline, paragraph }) => (
   <Wrap>
@@ -10,9 +10,8 @@ const Text = ({ hdline, paragraph }) => (
     {paragraph && <Paragraph dangerouslySetInnerHTML={{ __html: paragraph }} />}
   </Wrap>
 );
-
 const Hdline = styled.h2`
-  color: ${({ theme }) => theme.colors.bright};
+  color: ${({ theme }) => theme.hdline};
   font-size: 28px;
   font-weight: bold;
   line-height: 1.4;
@@ -29,7 +28,7 @@ const Hdline = styled.h2`
 `;
 
 const Paragraph = styled.p`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.paragraph};
   font-size: 16px;
   margin: 40px auto 0 auto;
   text-align: justify;
@@ -44,13 +43,12 @@ const Paragraph = styled.p`
 `;
 
 const Wrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.black};
+  background-color: ${({ theme }) => theme.background};
   opacity: 0.7;
   padding: 45px 20px 80px;
-
   @media ${device.PC} {
     padding: 300px 0 300px;
   }
 `;
 
-export default Text;
+export default withColorProps(Text, COLOR_PATTENRS);
