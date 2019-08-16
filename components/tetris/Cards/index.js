@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
-import createColorPattern from './createColorPattern';
-import withColorProps from '../../hoc/withColorProps';
+import PARTS_COLOR_MAPS from './PARTS_COLOR_MAPS';
+import withColorsProp from '../../hoc/withColorProps';
 
 import Card from './Card';
 import device from '../../../styleConfigs/breakPoints';
@@ -86,4 +86,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default withColorProps(Cards, createColorPattern);
+export default withColorsProp(Cards, PARTS_COLOR_MAPS);

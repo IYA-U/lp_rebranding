@@ -6,6 +6,7 @@ const withLayout = (ComposedComponent) => class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      mode: 'light',
       colors: {
         white: '#fff',
         bright: '#EFCB05',

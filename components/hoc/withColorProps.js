@@ -1,23 +1,25 @@
 import React, { useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
-import dynamic from 'next/dynamic';
 import { Config } from '../Layout/withLayout';
 import { Config as ConfigStorybook } from '../../.storybook/contexts';
 
-const withColorProps = (ChildComponent, COLOR_PATTERNS) => (props) => {
+const withColorsProp = (ChildComponent, PARTS_COLOR_MAPS) => (props) => {
+  const PARTS_COLOR_MAP = PARTS_COLOR_MAPS[props.colorPtnId];
   const config = useContext(Config);
   const storyBookConfig = useContext(ConfigStorybook);
-  const COLOR_PATTERN = config
-    ? COLOR_PATTERNS(config.colors)[props.colorPtnId]
-    : COLOR_PATTERNS(storyBookConfig.colors)[props.colorPtnId];
+  const isStorybook = !config;
+  const themeColors = isStorybook ? storyBookConfig.colors : config.colors;
+
+  const colors = {};
+  Object.keys(PARTS_COLOR_MAP).forEach((part) => {
+    colors[part] = themeColors[PARTS_COLOR_MAP[part]];
+  });
 
   return (
-    <ThemeProvider theme={COLOR_PATTERN}>
-      <ChildComponent
-        {...props}
-        colors={COLOR_PATTERN} />
+    <ThemeProvider theme={colors}>
+      <ChildComponent {...props} />
     </ThemeProvider>
   );
 };
 
-export default withColorProps;
+export default withColorsProp;
