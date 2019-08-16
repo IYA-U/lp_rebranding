@@ -6,6 +6,7 @@ import { themes as storybookTheme } from '@storybook/theming';
 import { contexts } from './contexts';
 import { Config } from './contexts';
 
+import '../styleConfigs/global.css';
 import GlobalStyle from '../styleConfigs/globalStyle';
 
 const defaultTheme = {
@@ -22,6 +23,18 @@ const req = require.context('../stories', true, /\.stories\.js$/);
 function loadStories() {
   req.keys().forEach((filename) => req(filename));
 }
+
+function withGlobalStyles(storyFn) {
+  return (
+    <React.Fragment>
+      <GlobalStyle />
+      {storyFn()}
+    </React.Fragment>
+  );
+}
+
+addDecorator(withGlobalStyles);
+
 addParameters({
   options: {
     theme: storybookTheme.dark,
@@ -33,13 +46,6 @@ addDecorator((story) => (
   <Config.Provider value={defaultTheme}>
     <ThemeProvider theme={defaultTheme}>{story()}</ThemeProvider>
   </Config.Provider>
-));
-
-addDecorator((s) => (
-  <>
-    <GlobalStyle />
-    {s()}
-  </>
 ));
 
 addParameters({
