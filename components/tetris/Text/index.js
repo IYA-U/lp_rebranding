@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import withColorProps from '../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
-import COLOR_PATTENRS from './COLOR_PATTERNS';
+import createColorPattern from './createColorPattern';
 
 const Text = ({ hdline, paragraph }) => (
   <Wrap>
@@ -51,4 +51,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default withColorProps(Text, COLOR_PATTENRS);
+export default withColorProps(Text, createColorPattern);

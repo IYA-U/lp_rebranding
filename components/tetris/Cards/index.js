@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
+import createColorPattern from './createColorPattern';
+import withColorProps from '../../hoc/withColorProps';
+
 import Card from './Card';
 import device from '../../../styleConfigs/breakPoints';
 
-const Cards = ({ cards }) => {
+const Cards = ({ cards, colors }) => {
   const isOdd = cards.length % 2 > 0;
 
   return (
@@ -26,7 +29,9 @@ const Cards = ({ cards }) => {
                 xs="12"
                 md="6"
                 lg={isOdd ? 4 : 3}>
-                <Card {...card} />
+                <Card
+                  {...card}
+                  colors={colors} />
               </Col>
             ))}
           </Row>
@@ -37,7 +42,7 @@ const Cards = ({ cards }) => {
 };
 
 const CardsArea = styled.div`
-  background-color: ${({ theme }) => theme.colors.dark};
+  background-color: ${({ theme }) => theme.background};
   padding: 90px 0 70px;
   @media ${device.PC} {
     padding: 200px 0 180px;
@@ -45,7 +50,7 @@ const CardsArea = styled.div`
 `;
 
 const Title = styled.h2`
-  color: ${({ theme }) => theme.colors.bright};
+  color: ${({ theme }) => theme.hdline};
   font-size: 2.8rem;
   font-weight: bold;
   letter-spacing: 0.2rem;
@@ -57,7 +62,7 @@ const Title = styled.h2`
 `;
 
 const Lead = styled.p`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.lead};
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.8;
@@ -81,4 +86,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default Cards;
+export default withColorProps(Cards, createColorPattern);

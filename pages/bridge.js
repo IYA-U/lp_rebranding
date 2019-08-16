@@ -20,11 +20,13 @@ const bridge = () => (
       <KeyvisualPatternA />
     </KeyvisualLayout>
     <Text
+      colorPtnId="a"
       lead=""
       hdline="阪神・淡路大震災。<br>困難に立ち向かった人々の奇跡の74日間"
       paragraph="1995年1月17日、阪神・淡路大震災発生 。大阪から神戸へと東西を繋ぐ要所である”六甲道駅”が路線ごと崩落。過酷な状況下で、わずか74日間で駅を復旧した人々の実話をもとに紡がれる人間ドラマ。"
     />
     <Trailer
+      colorPtnId="b"
       texts={{
         hdline: '独占配信の予告編を観る',
         paragraph: '',
@@ -40,7 +42,8 @@ const bridge = () => (
       }}
     />
 
-    <Thumbnails
+    {/* <Thumbnails
+      colorPtnId="c"
       title="「BRIDGE」の世界を広げる物語を独占配信！"
       thumbnails={[
         {
@@ -74,7 +77,7 @@ const bridge = () => (
       srcPc="/static/img/bridge/pc/pictures@2x.jpg"
       srcSp="/static/img/bridge/sp/pictures.jpg"
       alt="ジョジョのなんとかの冒険"
-    />
+    /> */}
     <Feature />
     <Device />
     <Spec />

@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container } from 'reactstrap';
 import device from '../../../styleConfigs/breakPoints';
 
 const Card = ({
-  img, lead, title, paragraph,
+  img, lead, title, paragraph, colors,
 }) => (
   <Wrap>
     <ImgBox>
@@ -19,7 +18,7 @@ const Card = ({
 );
 
 const Wrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.bright};
+  background-color: ${({ theme }) => theme.cardBody};
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   margin-top: 30px;
   @media ${device.TAB} {
@@ -57,7 +56,7 @@ const ImgBox = styled.div`
 `;
 
 const TextArea = styled.div`
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.cardText};
   padding: 30px 20px;
   @media ${device.TAB} {
     padding: 40px 23px;

@@ -22,12 +22,13 @@ const Jojo = () => (
       <KeyvisualPatternA></KeyvisualPatternA>
     </KeyvisualLayout>
     <Text
-      colorPtnId="a"
+      colorPtnId="b"
       lead=""
       hdline="青年ジョルノ・ジョバァーナ、街から麻薬を排除するという夢があった。"
       paragraph="イタリア裏社会を牛耳るギャング組織「パッショーネ」に属する青年ジョルノ・ジョバァーナ。 彼には街に麻薬を流す組織の「ボス」を倒し、街から麻薬を排除するという夢があった。 謎に秘められたボスに近づくため、同じ夢を抱く幹部のブローノ・ブチャラティ率いるチームと共に ボスの娘トリッシュ・ウナの護衛指令を果たしたジョルノたち。 しかしその指令の真の目的は、ボスの正体の手掛かりとなるトリッシュを ボス自らの手で確実に葬ることだった。 "
     />
     <Trailer
+      colorPtnId="a"
       texts={{
         hdline: '待望の第5部の予告',
         paragraph: '',
@@ -43,6 +44,7 @@ const Jojo = () => (
       }}
     />
     <Cards
+      colorPtnId="c"
       cards={[
         {
           img: '/static/img/jojo/img_chara01@2x.jpg',
@@ -94,7 +96,8 @@ const Jojo = () => (
         },
       ]}
     />
-    <Thumbnails
+    {/* <Thumbnails
+      colorPtnId="a"
       title="今までのジョジョ作品は、<br />ここにある"
       thumbnails={[
         {
@@ -128,8 +131,8 @@ const Jojo = () => (
           sid: 'SID0033217',
         },
       ]}
-    />
-    <Book
+    /> */}
+    {/* <Book
       hdline="動画だけじゃない、<br/>ジョジョ漫画全巻を読むなら、U-NEXT"
       books={{
         aspectRatio: 'sss',
@@ -183,7 +186,7 @@ const Jojo = () => (
       srcPc="/static/img/jojo/pc/pictures.jpg"
       srcSp="/static/img/jojo/sp/pictures.jpg"
       alt="ジョジョのなんとかの冒険"
-    />
+    /> */}
     <Feature />
     <Device />
     <Spec />

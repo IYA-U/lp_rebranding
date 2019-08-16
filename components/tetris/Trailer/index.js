@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
+import createColorPattern from './createColorPattern';
+import withColorProps from '../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
 import SubPatternWrap from '../common/SubPatternWrap';
 import Video from './Video';
@@ -8,27 +10,36 @@ import Video from './Video';
 const Trailer = ({ texts, video }) => {
   if (texts) {
     return (
-      <Container>
-        <WrapText>
-          <TextArea>
-            {texts.hdline && <HdlineText>{texts.hdline}</HdlineText>}
-            {texts.paragraph && <Text>{texts.paragraph}</Text>}
-          </TextArea>
-          <VideoWrapText>
-            <Video {...video} />
-          </VideoWrapText>
-        </WrapText>
-      </Container>
+      <BackGround>
+        <Container>
+          <WrapText>
+            <TextArea>
+              {texts.hdline && <HdlineText>{texts.hdline}</HdlineText>}
+              {texts.paragraph && <Text>{texts.paragraph}</Text>}
+            </TextArea>
+            <VideoWrapText>
+              <Video {...video} />
+            </VideoWrapText>
+          </WrapText>
+        </Container>
+      </BackGround>
     );
   }
   return (
-    <Container>
-      <Wrap>
-        <Video {...video} />
-      </Wrap>
-    </Container>
+    <BackGround>
+      <Container>
+        <Wrap>
+          <Video {...video} />
+        </Wrap>
+      </Container>
+    </BackGround>
   );
 };
+
+const BackGround = styled.div`
+  background-color: ${({ theme }) => theme.background};
+  width: 100%;
+`;
 
 const Wrap = styled.div`
   padding: 40px 20px;
@@ -53,7 +64,7 @@ const VideoWrapText = styled.div`
 `;
 
 const HdlineText = styled.h2`
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.hdline};
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 40px;
@@ -68,4 +79,4 @@ const TextArea = styled.div``;
 
 const Text = styled.p``;
 
-export default Trailer;
+export default withColorProps(Trailer, createColorPattern);

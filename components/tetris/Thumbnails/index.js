@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
 import Thumbnail from './Thumbnail';
 import device from '../../../styleConfigs/breakPoints';
-import SubPatternWrap from '../common/SubPatternWrap';
 
 const Thumbnails = ({ thumbnails, title }) => {
   const isOdd = thumbnails.length % 2 > 0;
