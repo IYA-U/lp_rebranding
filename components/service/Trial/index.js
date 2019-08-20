@@ -81,7 +81,7 @@ const Title = styled.h2`
   line-height: 1.4;
   padding: 45px 30px;
   span {
-    color: ${({ theme }) => theme.colors.dark};
+    color: ${({ theme }) => theme.dark};
   }
   @media ${device.TAB} {
     font-size: 36px;

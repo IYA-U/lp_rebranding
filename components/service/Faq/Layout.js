@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import device from '../../../styleConfigs/breakPoints';
 
 export const FaqBody = styled.div`
@@ -19,7 +20,7 @@ export const Title = styled.h2`
   line-height: 1.4;
   padding: 45px 30px;
   span {
-    color: ${({ theme }) => theme.colors.dark};
+    color: ${({ theme }) => theme.colorConfig.colors.dark};
   }
   @media ${device.TAB} {
     font-size: 36px;

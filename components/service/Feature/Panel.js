@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import device from '../../../styleConfigs/breakPoints';
 
-import { Config } from '../../Layout/withLayout';
+import { ConfigContext } from '../../hoc/withConfigProvider';
 
 const Panel = ({ numStr, title, filter }) => {
-  const config = useContext(Config);
+  const config = useContext(ConfigContext);
   const initialAccordionState = config.device.isPc;
   const [isOpen, setOpen] = useState(initialAccordionState);
   const animation = useSpring({
@@ -40,7 +40,7 @@ const Panel = ({ numStr, title, filter }) => {
 };
 
 const Wrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.dark};
+  background-color: ${({ theme }) => theme.panel};
   color: white;
   filter: ${({ filter }) => filter};
 `;

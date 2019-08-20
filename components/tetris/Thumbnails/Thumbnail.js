@@ -18,7 +18,7 @@ const CardImg = styled.img`
 `;
 
 const CardTextWrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.dark};
+  background-color: ${({ theme }) => theme.colorConfig.colors.dark};
   color: white;
   height: 50px;
   position: relative;
@@ -47,7 +47,7 @@ const CardTextWrap = styled.div`
     }
   }
   &:after {
-    background-color: ${({ theme }) => theme.colors.dark};
+    background-color: ${({ theme }) => theme.colorConfig.colors.dark};
     content: '';
     filter: brightness(120%);
     height: 100%;

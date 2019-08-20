@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import device from '../../styleConfigs/breakPoints';
 import InfoBlockText from './Common/infoBlock--text';
 import InfoBlock from './Common/infoBlock';
-import { Config } from '../Layout/withLayout';
+import { ConfigContext } from '../hoc/withConfigProvider';
 
-const PatternA = () => {
-  const config = useContext(Config);
+const PatternA = ({ subPattern }) => {
+  const config = useContext(ConfigContext);
   const wrapConfig = {
     backgroundPosition: (() => {
-      switch (config.subPattern) {
+      switch (subPattern) {
         case 'right':
           return 'left';
         case 'left':
@@ -21,7 +21,6 @@ const PatternA = () => {
       }
     })(),
     justifyContent: (() => {
-      const { subPattern } = config;
       if (subPattern === 'center') return 'center';
       if (!config.device.isPc || subPattern === 'right') return 'flex-end';
       if (subPattern === 'left') return 'flex-start';

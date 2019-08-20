@@ -12,14 +12,14 @@ import Footer from '../components/common/Footer';
 
 const Service = () => (
   <>
-    <Keyvisual />
+    {/* <Keyvisual />
     <Feature />
     <Device />
     <Spec />
     <Titles />
     <Trial />
     <Faq />
-    <Footer />
+    <Footer /> */}
   </>
 );
 

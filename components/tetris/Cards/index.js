@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
-import PARTS_COLOR_MAPS from './PARTS_COLOR_MAPS';
-import withColorsProp from '../../hoc/withColorProps';
+
+import COLOR_MAPS from './COLOR_MAPS';
+import withColorPropsWithMap from '../../hoc/withColorProps';
 
 import Card from './Card';
 import device from '../../../styleConfigs/breakPoints';
@@ -86,4 +87,8 @@ const Wrap = styled.div`
   }
 `;
 
+<<<<<<< HEAD
 export default withColorsProp(Cards, PARTS_COLOR_MAPS);
+=======
+export default withColorPropsWithMap(Cards, COLOR_MAPS);
+>>>>>>> パス修正 (+9 squashed commits)

@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import {
   Container, Row, Col, UncontrolledCollapse,
 } from 'reactstrap';
+
+import COLOR_MAP from './COLOR_MAP';
+import withColorPropsWithMap from '../../hoc/withColorProps';
+
 import constants from './constants';
 import Sl from './Sl';
 import {
@@ -14,10 +18,11 @@ import {
   TogglerWrap,
   Arrow,
   Br,
+  Wrap,
 } from './Layout';
 
 const Spec = () => (
-  <>
+  <Wrap>
     <Container>
       <Row>
         <Col xs="12">
@@ -56,6 +61,6 @@ const Spec = () => (
         </Col>
       </Row>
     </Container>
-  </>
+  </Wrap>
 );
-export default Spec;
+export default withColorPropsWithMap(Spec, COLOR_MAP);

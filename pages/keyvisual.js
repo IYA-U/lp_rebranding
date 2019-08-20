@@ -20,9 +20,9 @@ const Keyvisual = () => {
 
   return (
     <>
-      <KeyvisualLayout>
+      {/* <KeyvisualLayout>
         <DynamicComponent />
-      </KeyvisualLayout>
+      </KeyvisualLayout> */}
     </>
   );
 };
