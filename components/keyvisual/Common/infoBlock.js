@@ -42,7 +42,7 @@ const Wrap = styled.div`
 
 const Cta = styled.div`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colorConfig.colors.bright};
   color: white;
   display: flex;
   font-size: 16px;

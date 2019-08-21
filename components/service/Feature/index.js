@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import COLOR_MAP from './COLOR_MAP';
+import withColorPropsWithMap from '../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
 
 import Panel from './Panel';
@@ -42,13 +44,17 @@ const Feature = ({ title }) => (
   </Wrap>
 );
 
+const Wrap = styled.div`
+  background-color: ${({ theme }) => theme.background};
+`;
+
 const Title = styled.h2`
-  color: #505050;
+  color: ${({ theme }) => theme.title};
   font-size: 32px;
   line-height: 1.4;
   padding: 60px 30px;
   span {
-    color: ${({ theme }) => theme.colors.dark};
+    color: ${({ theme }) => theme.titleAccent};
   }
   @media ${device.TAB} {
     font-size: 36px;
@@ -56,10 +62,6 @@ const Title = styled.h2`
     text-align: center;
     padding: 120px 0;
   }
-`;
-
-const Wrap = styled.div`
-  background-color: rgba(0, 0, 0, 0.04);
 `;
 
 const PanelWrap = styled.div`
@@ -76,4 +78,4 @@ const Br = styled.br`
   }
 `;
 
-export default Feature;
+export default withColorPropsWithMap(Feature, COLOR_MAP);

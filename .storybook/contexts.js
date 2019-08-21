@@ -1,13 +1,5 @@
 import React from 'react';
 
-const defaultTheme = {
-  colors: {
-    white: '#fff',
-    bright: '#EFCB05',
-    dark: '#4E00AA',
-    black: '#000000',
-  },
-};
 export const Config = React.createContext();
 
 export const contexts = [

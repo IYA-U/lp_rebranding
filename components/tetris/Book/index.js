@@ -27,7 +27,7 @@ const Books = ({ hdline, books }) => (
 );
 
 const Wrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.bright};
+  background-color: ${({ theme }) => theme.colorConfig.colors.bright};
   padding: 90px 8px;
   @media ${device.PC} {
     padding: 180px 0;
@@ -35,7 +35,7 @@ const Wrap = styled.div`
 `;
 
 const Title = styled.h2`
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colorConfig.colors.dark};
   font-size: 2.8rem;
   font-weight: bold;
   letter-spacing: 0.2rem;

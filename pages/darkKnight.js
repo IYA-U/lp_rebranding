@@ -9,33 +9,37 @@ import {
 } from '../components/tetris';
 
 const COLOR_CONFIG = {
-  mode: 'light',
+  mode: 'dark',
   colors: {
     bright: {
-      hue: 50,
-      saturation: 95,
-      lightness: 47,
+      hue: 193,
+      saturation: 67,
+      lightness: 53,
     },
     dark: {
-      hue: 267,
+      hue: 210,
       saturation: 100,
-      lightness: 33,
+      lightness: 19,
     },
   },
 };
 
-const Jojo = () => (
+const DarkKnight = () => (
   <>
     <Text
-      colorPtnId="d"
-      hdline="青年ジョルノ・ジョバァーナ、街から麻薬を排除するという夢があった。"
-      paragraph="イタリア裏社会を牛耳るギャング組織「パッショーネ」に属する青年ジョルノ・ジョバァーナ。 彼には街に麻薬を流す組織の「ボス」を倒し、街から麻薬を排除するという夢があった。 謎に秘められたボスに近づくため、同じ夢を抱く幹部のブローノ・ブチャラティ率いるチームと共に ボスの娘トリッシュ・ウナの護衛指令を果たしたジョルノたち。 しかしその指令の真の目的は、ボスの正体の手掛かりとなるトリッシュを ボス自らの手で確実に葬ることだった。 "
-      bgImg="/static/img/jojo/textBg.jpg"
+      colorPtnId="a"
+      hdline="公開から10年が経った現在も、ヒーロー映画のベンチマークであり続けています。"
+      paragraph="クリストファー・ノーラン監督の陰鬱なバットマンシリーズの2作目となったこの映画は、疑心暗鬼や倫理的な行き詰まりに溢れ、ポスト「9.11」（ニューヨークで起こったテロ事件）初の超大作映画と称賛されました。長い映画史のなかで初めて、ヒーロー映画が真剣に受け止められたのです。 "
+    />
+    <PictureFullWidth
+      srcPc="/static/img/darkKnight/bike.jpg"
+      srcSp="/static/img/darkKnight/bike.jpg"
+      alt="ジョジョのなんとかの冒険"
     />
     <Trailer
-      colorPtnId="a"
+      colorPtnId="b"
       texts={{
-        hdline: '待望の第5部の予告',
+        hdline: '再びこの陰鬱な予告編を',
         paragraph: '',
       }}
       video={{
@@ -45,49 +49,52 @@ const Jojo = () => (
           'https://streamh01.nxtv.jp/hls03/special/unext_promotion/twd_s9_2_trailer/mp4/twd_s9_2_trailer.mp4',
         webm:
           'https://streamh01.nxtv.jp/hls03/special/unext_promotion/twd_s9_2_trailer/webm/twd_s9_2_trailer.webm',
-        poster: '/static/img/jojo/trailerfuta@2x.jpg',
+        poster: '/static/img/darkKnight/trailer.jpg',
       }}
     />
     <Cards
-      colorPtnId="d"
+      colorPtnId="a"
       cards={[
         {
-          img: '/static/img/jojo/img_chara01@2x.jpg',
+          img:
+            'http://imgc.nxtv.jp/img/info/tit/00003/SID0003944.png?output-format=jpeg&output-quality=60&resize=500:500',
           title: 'ジョルノ・<br />ジョバァーナ',
           paragraph:
             '父親はジョースター家の宿敵DIO自分を救ってくれたギャングに憧れて、街を浄化するために、自身もギャングスターになる決意を抱いてギャング組織「パッショーネ」に入団。',
         },
         {
-          img: '/static/img/jojo/img_chara02@2x.jpg',
+          img:
+            'http://imgc.nxtv.jp/img/info/tit/00003/SID0003944.png?output-format=jpeg&output-quality=60&resize=500:500',
           title: 'ブローノ・<br />ブチャラティ',
           paragraph:
             'ギャング組織「パッショーネ」のチームリーダーの一人で、ポルポの部下。20歳。おかっぱのように切り揃えた髪に、白地に点が入り多数のジッパーが付いたスーツを着用している。',
         },
         {
-          img: '/static/img/jojo/img_chara03@2x.jpg',
+          img:
+            'http://imgc.nxtv.jp/img/info/tit/00003/SID0003944.png?output-format=jpeg&output-quality=60&resize=500:500',
           title: 'トリッシュ・<br />ウナ',
           paragraph:
             'パッショーネのボスの娘。1986年4月19日生まれ。15歳。四則演算の記号がプリントされたパレオのような服を着ている。',
         },
         {
-          img: '/static/img/jojo/img_chara04@2x.jpg',
+          img:
+            'http://imgc.nxtv.jp/img/info/tit/00003/SID0003944.png?output-format=jpeg&output-quality=60&resize=500:500',
           title: 'グイード・<br />ミスタ',
           paragraph:
             'ブチャラティの部下でチームのムードメーカー。18歳。ファッションは網模様の服と縞のズボン、網と丸点模様の帽子。',
         },
       ]}
     />
-    {/* <PictureFullWidth
-      srcPc="/static/img/jojo/pc/pictures.jpg"
-      srcSp="/static/img/jojo/sp/pictures.jpg"
+    <PictureFullWidth
+      srcPc="/static/img/darkKnight/pictures.jpg"
+      srcSp="/static/img/darkKnight/pictures.jpg"
       alt="ジョジョのなんとかの冒険"
     />
-
     <Feature colorPtnId="a" />
     <Device colorPtnId="a" />
     <Spec colorPtnId="a" />
-    <Footer colorPtnId="a" /> */}
+    <Footer colorPtnId="a" />
   </>
 );
 
-export default withConfigProvider(Jojo, COLOR_CONFIG);
+export default withConfigProvider(DarkKnight, COLOR_CONFIG);

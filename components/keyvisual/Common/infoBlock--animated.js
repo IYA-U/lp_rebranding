@@ -100,7 +100,7 @@ const TitleTextCover = styled(animated.div)`
 `;
 
 const Text = styled(animated.p)`
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colorConfig.colors.bright};
   font-size: 13px;
   line-height: 1.45;
   margin-top: 10px;
@@ -113,7 +113,7 @@ const Text = styled(animated.p)`
 
 const Cta = styled(animated.div)`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colorConfig.colors.bright};
   color: white;
   display: flex;
   font-size: 16px;

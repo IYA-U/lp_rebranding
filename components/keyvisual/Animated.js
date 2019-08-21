@@ -40,15 +40,15 @@ const Wrap = styled.div`
 `;
 
 const InfoArea = styled(animated.div)`
-  position: absolute;
   background-color: rgba(0, 0, 0, 0.95);
-  left: 0;
   bottom: 0;
-  /* height: 100%; */
   height: 45%;
-
   justify-content: center;
+  /* height: 100%; */
+  left: 0;
+
   padding: 20px 30px 0px;
+  position: absolute;
   width: 100%;
   z-index: 5;
   @media ${device.TAB} {

@@ -15,10 +15,8 @@ const Wrap = styled.div`
   background-repeat: no-repeat;
   background-size: auto 150px;
   height: 150px;
-  margin-top: 60px;
   position: relative;
   @media ${device.TAB} {
-    margin-top: 120px;
     background-image: url('/static/img/footer/footer_bg_pc.png');
     height: 300px;
     background-size: auto 300px;

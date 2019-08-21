@@ -1,20 +1,37 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withContexts } from '@storybook/addon-contexts/react';
-import { themes as storybookTheme } from '@storybook/theming';
 import { contexts } from './contexts';
 import { Config } from './contexts';
-
 import '../styleConfigs/global.css';
 import GlobalStyle from '../styleConfigs/globalStyle';
 
 const defaultTheme = {
-  colors: {
-    white: '#fff',
-    bright: '#EFCB05',
-    dark: '#4E00AA',
-    black: '#000000',
+  colorConfig: {
+    mode: 'light',
+    colors: {
+      white: {
+        hue: 0,
+        saturation: 0,
+        lightness: 100,
+      },
+      bright: {
+        hue: 50,
+        saturation: 95,
+        lightness: 47,
+      },
+      dark: {
+        hue: 267,
+        saturation: 100,
+        lightness: 33,
+      },
+      black: {
+        hue: 0,
+        saturation: 0,
+        lightness: 0,
+      },
+    },
   },
 };
 
@@ -35,17 +52,10 @@ function withGlobalStyles(storyFn) {
 
 addDecorator(withGlobalStyles);
 
-addParameters({
-  options: {
-    theme: storybookTheme.dark,
-  },
-});
 addDecorator(withContexts(contexts));
 
 addDecorator((story) => (
-  <Config.Provider value={defaultTheme}>
-    <ThemeProvider theme={defaultTheme}>{story()}</ThemeProvider>
-  </Config.Provider>
+  <Config.Provider value={defaultTheme}>{story()}</Config.Provider>
 ));
 
 addParameters({

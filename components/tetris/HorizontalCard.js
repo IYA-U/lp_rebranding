@@ -42,7 +42,7 @@ const ImgArea = styled.div`
 `;
 
 const TextArea = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colorConfig.colors.bright};
   color: white;
   padding: 30px 15px 60px;
   text-align: justify;

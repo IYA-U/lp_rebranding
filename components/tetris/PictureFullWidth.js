@@ -1,7 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const PictureFullWidth = ({ srcPc, srcSp, alt }) => (
-  <picture>
+  <Picture>
     <source
       media="(min-width: 640px)"
       srcSet={srcPc} />
@@ -11,7 +12,11 @@ const PictureFullWidth = ({ srcPc, srcSp, alt }) => (
     <img
       src={srcPc}
       alt={alt} />
-  </picture>
+  </Picture>
 );
+
+const Picture = styled.div`
+  width: 100%;
+`;
 
 export default PictureFullWidth;

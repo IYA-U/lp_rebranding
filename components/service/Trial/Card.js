@@ -14,7 +14,7 @@ const Card = ({ lead, main, numberText }) => (
 );
 
 const Wrap = styled.div`
-  background-color: ${({ theme }) => theme.colors.dark};
+  background-color: ${({ theme }) => theme.dark};
   color: white;
   width: 100%;
 `;
@@ -46,7 +46,7 @@ const Up = styled.div`
 `;
 
 const Down = styled.div`
-  background-color: ${({ theme }) => theme.colors.dark};
+  background-color: ${({ theme }) => theme.dark};
   filter: brightness(130%);
   font-size: 20px;
   padding: 15px;

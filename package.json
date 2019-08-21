@@ -55,6 +55,7 @@
     "react-on-screen": "2.x",
     "react-slick": "^0.24.0",
     "react-spring": "8.x",
+    "react-use": "^10.6.2",
     "reactstrap": "8.x",
     "styled-components": "4.x"
   },

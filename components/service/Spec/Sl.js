@@ -16,12 +16,13 @@ const Sl = (props) => (
 );
 
 const SpecList = styled.li`
+  color: ${({ theme }) => theme.text};
   padding: 3.2rem 3rem;
   &:nth-child(odd) {
-    background-color: #f7f7f7;
+    background-color: ${({ theme }) => theme.rowOdd};
   }
   &:nth-child(even) {
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.rowEven};
   }
   @media ${device.TAB} {
     padding: 3rem 6rem;

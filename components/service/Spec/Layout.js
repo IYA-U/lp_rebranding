@@ -1,9 +1,16 @@
 import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
 
+export const Wrap = styled.div`
+  background-color: ${({ theme }) => theme.background};
+  padding-bottom: 60px;
+  width: 100%;
+  @media ${device.TAB} {
+    padding-bottom: 120px;
+  }
+`;
+
 export const SpecBody = styled.div`
-  background-color: #fff;
-  color: #505050;
   width: 100%;
   @media ${device.TAB} {
     max-width: 1152px;
@@ -12,13 +19,10 @@ export const SpecBody = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: #505050;
+  color: ${({ theme }) => theme.title};
   font-size: 32px;
   line-height: 1.4;
   padding: 45px 30px;
-  span {
-    color: ${({ theme }) => theme.colors.dark};
-  }
   @media ${device.TAB} {
     font-size: 36px;
     display: block;

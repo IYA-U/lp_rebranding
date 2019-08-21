@@ -2,12 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import withColorsProp from '../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
-import PARTS_COLOR_MAPS from './PARTS_COLOR_MAPS';
+import COLOR_MAPS from './COLOR_MAPS';
 
-const Text = ({ hdline, paragraph }) => (
-  <Wrap>
-    {hdline && <Hdline dangerouslySetInnerHTML={{ __html: hdline }} />}
-    {paragraph && <Paragraph dangerouslySetInnerHTML={{ __html: paragraph }} />}
+const Text = ({ hdline, paragraph, bgImg }) => (
+  <Wrap bgImg={bgImg}>
+    <BgColor>
+      {hdline && <Hdline dangerouslySetInnerHTML={{ __html: hdline }} />}
+      {paragraph && (
+        <Paragraph dangerouslySetInnerHTML={{ __html: paragraph }} />
+      )}
+    </BgColor>
   </Wrap>
 );
 const Hdline = styled.h2`
@@ -42,13 +46,18 @@ const Paragraph = styled.p`
   }
 `;
 
-const Wrap = styled.div`
+const BgColor = styled.div`
   background-color: ${({ theme }) => theme.background};
-  opacity: 0.7;
+  opacity: ${({ theme }) => theme.background};
+  opacity: 1;
   padding: 45px 20px 80px;
   @media ${device.PC} {
     padding: 300px 0 300px;
   }
 `;
 
-export default withColorsProp(Text, PARTS_COLOR_MAPS);
+const Wrap = styled.div`
+  background: ${({ bgImg }) => (bgImg ? `url('${bgImg}')` : 'none')};
+`;
+
+export default withColorsProp(Text, COLOR_MAPS);

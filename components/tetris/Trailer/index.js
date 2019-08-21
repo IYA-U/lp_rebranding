@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
-import PARTS_COLOR_MAPS from './PARTS_COLOR_MAPS';
-import withColorsProp from '../../hoc/withColorProps';
+
+import COLOR_MAPS from './COLOR_MAPS';
+import withColorPropsWithMap from '../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
 import SubPatternWrap from '../common/SubPatternWrap';
 import Video from './Video';
@@ -79,4 +80,4 @@ const TextArea = styled.div``;
 
 const Text = styled.p``;
 
-export default withColorsProp(Trailer, PARTS_COLOR_MAPS);
+export default withColorPropsWithMap(Trailer, COLOR_MAPS);
