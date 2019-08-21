@@ -87,8 +87,4 @@ const Wrap = styled.div`
   }
 `;
 
-<<<<<<< HEAD
-export default withColorsProp(Cards, PARTS_COLOR_MAPS);
-=======
 export default withColorPropsWithMap(Cards, COLOR_MAPS);
->>>>>>> パス修正 (+9 squashed commits)

@@ -80,8 +80,4 @@ const TextArea = styled.div``;
 
 const Text = styled.p``;
 
-<<<<<<< HEAD
-export default withColorsProp(Trailer, PARTS_COLOR_MAPS);
-=======
 export default withColorPropsWithMap(Trailer, COLOR_MAPS);
->>>>>>> パス修正 (+9 squashed commits)

@@ -1,18 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import { ThemeProvider } from 'styled-components';
-import { configure, addDecorator, addParameters } from '@storybook/react';
-import { withContexts } from '@storybook/addon-contexts/react';
-import { themes as storybookTheme } from '@storybook/theming';
-import { contexts } from './contexts';
-import { Config } from './contexts';
 
-=======
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withContexts } from '@storybook/addon-contexts/react';
 import { contexts } from './contexts';
 import { Config } from './contexts';
->>>>>>> パス修正 (+9 squashed commits)
 import '../styleConfigs/global.css';
 import GlobalStyle from '../styleConfigs/globalStyle';
 
@@ -60,7 +51,6 @@ function withGlobalStyles(storyFn) {
 }
 
 addDecorator(withGlobalStyles);
-
 
 addDecorator(withContexts(contexts));
 
