@@ -1,12 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import device from '../../styleConfigs/breakPoints';
+import useWindowSize from '../hook/useWindowSize';
+import Layout from './Common/Layout';
 import InfoBlockText from './Common/infoBlock--text';
 import InfoBlock from './Common/infoBlock';
-import { ConfigContext } from '../hoc/withConfigProvider';
 
-const PatternA = ({ subPattern }) => {
-  const config = useContext(ConfigContext);
+const PatternA = ({ subPattern, bgImg, infoBlock }) => {
+  const windowSize = useWindowSize();
   const wrapConfig = {
     backgroundPosition: (() => {
       switch (subPattern) {
@@ -22,40 +23,47 @@ const PatternA = ({ subPattern }) => {
     })(),
     justifyContent: (() => {
       if (subPattern === 'center') return 'center';
-      if (!config.device.isPc || subPattern === 'right') return 'flex-end';
+      if (!windowSize.isPc || subPattern === 'right') return 'flex-end';
       if (subPattern === 'left') return 'flex-start';
     })(),
   };
 
   return (
-    <>
-      <Wrap config={wrapConfig}>
+    <Layout>
+      <Wrap
+        config={wrapConfig}
+        bgImg={bgImg}>
         <MainBlock>
-          {config.device.isPc || config.subPattern === 'center' ? (
-            <InfoBlock />
+          {windowSize.isPC || subPattern === 'center' ? (
+            <InfoBlock
+              {...infoBlock}
+              colorPtnId="a" />
           ) : (
-            <InfoBlockText />
+            <InfoBlockText
+              colorPtnId="a"
+              {...infoBlock} />
           )}
         </MainBlock>
-        {!config.device.isPc && config.subPattern !== 'center' && <Gradient />}
+        {!windowSize.isPC && subPattern !== 'center' && <Gradient />}
       </Wrap>
-    </>
+    </Layout>
   );
 };
 
 const Wrap = styled.div`
-  background-image: url('/static/img/keyvisual/main/sp/BRIDGE.png');
+  background-image: url('${({ bgImg }) => bgImg.sp}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: ${({ theme }) => (theme.device.isPc ? 'row' : 'column')};
+  flex-direction: column;
   height: 100%;
   justify-content: ${({ config }) => config.justifyContent};
   position: relative;
   @media ${device.TAB} {
-    background-image: url('/static/img/keyvisual/main/pc/BRIDGE.png');
+    background-image: url('${({ bgImg }) => bgImg.pc}');
     background-position: ${({ config }) => config.backgroundPosition};
+    flex-direction: row-reverse; 
   }
   &:after {
     background-color: rgba(0, 0, 0, 0.4);
@@ -69,12 +77,16 @@ const Wrap = styled.div`
 
 const MainBlock = styled.div`
   display: flex;
-  height: ${({ theme }) => (theme.device.isPc ? '100%' : 'auto')};
+  height: auto;
   justify-content: center;
   padding: 30px;
   position: relative;
-  width: ${({ theme }) => (theme.device.isPc ? '50%' : '100%')};
+  width: 100%;
   z-index: 5;
+  @media ${device.TAB} {
+    height: 100%;
+    width: 50%;
+  }
 `;
 
 const Gradient = styled.div`

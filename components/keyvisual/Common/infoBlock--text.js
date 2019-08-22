@@ -1,22 +1,32 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import withColorProps from '../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
-import { Config } from '../../Layout/withLayout';
 
-const InfoBlock = () => {
-  const config = useContext(Config);
-  return (
-    <Wrap>
-      <TitleText dangerouslySetInnerHTML={{ __html: '観る、読む、ぜんぶ' }} />
-      <Text
-        dangerouslySetInnerHTML={{
-          __html: '充実のライナップ！<br/>何かのテキストが2行',
-        }}
-      />
-      <Cta>CTAボタン最大文字数17</Cta>
-    </Wrap>
-  );
+const COLOR_MAP = {
+  light: {
+    a: {
+      cta: 'dark',
+    },
+  },
+  dark: {
+    a: {
+      cta: 'bright',
+    },
+  },
 };
+
+const InfoBlock = ({ title, text }) => (
+  <Wrap>
+    <TitleText dangerouslySetInnerHTML={{ __html: title }} />
+    <Text
+      dangerouslySetInnerHTML={{
+        __html: text,
+      }}
+    />
+    <Cta>まずは３１日間無料体験</Cta>
+  </Wrap>
+);
 
 const Text = styled.p`
   color: white;
@@ -43,7 +53,7 @@ const Wrap = styled.div`
 
 const Cta = styled.div`
   align-items: center;
-  background-color: ${({ theme }) => theme.colorConfig.colors.bright};
+  background-color: ${({ theme }) => theme.cta};
   color: white;
   display: flex;
   font-size: 16px;
@@ -62,4 +72,4 @@ const TitleText = styled.div`
   text-align: center;
 `;
 
-export default InfoBlock;
+export default withColorProps(InfoBlock, COLOR_MAP);

@@ -1,24 +1,34 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import withColorProps from '../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
-import { Config } from '../../Layout/withLayout';
 
-const InfoBlock = () => {
-  const config = useContext(Config);
-  return (
-    <Wrap>
-      <Text
-        dangerouslySetInnerHTML={{
-          __html: '充実のライナップだよ',
-        }}
-      />
-      <img
-        src="/static/img/keyvisual/centerImage/teiichi.png"
-        alt="" />
-      <Cta>CTAボタン最大文字数17</Cta>
-    </Wrap>
-  );
+const COLOR_MAP = {
+  light: {
+    a: {
+      cta: 'dark',
+    },
+  },
+  dark: {
+    a: {
+      cta: 'bright',
+    },
+  },
 };
+
+const InfoBlock = ({ text }) => (
+  <Wrap>
+    <Text
+      dangerouslySetInnerHTML={{
+        __html: text,
+      }}
+    />
+    <img
+      src="/static/img/keyvisual/centerImage/teiichi.png"
+      alt="" />
+    <Cta>CTAボタン最大文字数17</Cta>
+  </Wrap>
+);
 
 const Text = styled.p`
   color: white;
@@ -42,7 +52,7 @@ const Wrap = styled.div`
 
 const Cta = styled.div`
   align-items: center;
-  background-color: ${({ theme }) => theme.colorConfig.colors.bright};
+  background-color: ${({ theme }) => theme.cta};
   color: white;
   display: flex;
   font-size: 16px;
@@ -52,4 +62,4 @@ const Cta = styled.div`
   width: calc(100% - 30px);
 `;
 
-export default InfoBlock;
+export default withColorProps(InfoBlock, COLOR_MAP);

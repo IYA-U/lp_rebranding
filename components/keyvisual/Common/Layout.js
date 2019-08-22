@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import useWindowSize from '../../hook/useWindowSize';
 import device from '../../../styleConfigs/breakPoints';
 import Logo from './logo';
 
 const Layout = ({ children }) => (
-  <Wrap>
+  <Wrap heightPx={useWindowSize().height}>
     <Logo />
     <GeometricWrap>
       <Geometric />
@@ -17,7 +18,7 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
-  height: ${({ theme }) => `${theme.device.windowHeight}px`};
+  height: ${({ heightPx }) => heightPx}px;
   overflow: hidden;
   position: relative;
   width: 100%;

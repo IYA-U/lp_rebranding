@@ -1,9 +1,8 @@
 import React from 'react';
 import withConfigProvider from '../components/hoc/withConfigProvider';
+import KeyVisualPatternA from '../components/keyvisual/PatternA';
 import Footer from '../components/common/Footer';
-
 import { Device, Spec, Feature } from '../components/service';
-
 import {
   Trailer, Cards, PictureFullWidth, Text,
 } from '../components/tetris';
@@ -26,6 +25,15 @@ const COLOR_CONFIG = {
 
 const DarkKnight = () => (
   <>
+    <KeyVisualPatternA
+      bgImg={{
+        sp: '/static/img/darkKnight/eyecatch_sp.jpg',
+        pc: '/static/img/darkKnight/eyecatch.jpg',
+      }}
+      infoBlock={{
+        text: 'コウモリが世界を救う<br/>抱腹絶倒のアニマルコメディー',
+      }}
+    ></KeyVisualPatternA>
     <Text
       colorPtnId="a"
       hdline="公開から10年が経った現在も、ヒーロー映画のベンチマークであり続けています。"
