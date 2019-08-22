@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import device from '../../styleConfigs/breakPoints';
+import useWindowSize from '../hook/useWindowSize';
 import Layout from './Common/Layout';
 import InfoBlockText from './Common/infoBlock--text';
 import InfoBlock from './Common/infoBlock';
-import { ConfigContext } from '../hoc/withConfigProvider';
 
 const PatternA = ({ subPattern, bgImg, infoBlock }) => {
-  const config = useContext(ConfigContext);
+  const windowSize = useWindowSize();
   const wrapConfig = {
     backgroundPosition: (() => {
       switch (subPattern) {
@@ -23,7 +23,7 @@ const PatternA = ({ subPattern, bgImg, infoBlock }) => {
     })(),
     justifyContent: (() => {
       if (subPattern === 'center') return 'center';
-      if (!config.device.isPc || subPattern === 'right') return 'flex-end';
+      if (!windowSize.isPc || subPattern === 'right') return 'flex-end';
       if (subPattern === 'left') return 'flex-start';
     })(),
   };
@@ -34,15 +34,17 @@ const PatternA = ({ subPattern, bgImg, infoBlock }) => {
         config={wrapConfig}
         bgImg={bgImg}>
         <MainBlock>
-          {config.device.isPc || subPattern === 'center' ? (
-            <InfoBlock {...infoBlock} />
+          {windowSize.isPC || subPattern === 'center' ? (
+            <InfoBlock
+              {...infoBlock}
+              colorPtnId="a" />
           ) : (
             <InfoBlockText
               colorPtnId="a"
               {...infoBlock} />
           )}
         </MainBlock>
-        {!config.device.isPc && subPattern !== 'center' && <Gradient />}
+        {!windowSize.isPC && subPattern !== 'center' && <Gradient />}
       </Wrap>
     </Layout>
   );
@@ -54,13 +56,14 @@ const Wrap = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: ${({ theme }) => (theme.device.isPc ? 'row' : 'column')};
+  flex-direction: column;
   height: 100%;
   justify-content: ${({ config }) => config.justifyContent};
   position: relative;
   @media ${device.TAB} {
     background-image: url('${({ bgImg }) => bgImg.pc}');
     background-position: ${({ config }) => config.backgroundPosition};
+    flex-direction: row-reverse; 
   }
   &:after {
     background-color: rgba(0, 0, 0, 0.4);
@@ -74,12 +77,16 @@ const Wrap = styled.div`
 
 const MainBlock = styled.div`
   display: flex;
-  height: ${({ theme }) => (theme.device.isPc ? '100%' : 'auto')};
+  height: auto;
   justify-content: center;
   padding: 30px;
   position: relative;
-  width: ${({ theme }) => (theme.device.isPc ? '50%' : '100%')};
+  width: 100%;
   z-index: 5;
+  @media ${device.TAB} {
+    height: 100%;
+    width: 50%;
+  }
 `;
 
 const Gradient = styled.div`

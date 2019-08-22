@@ -1,27 +1,24 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { ConfigContext } from '../../hoc/withConfigProvider';
+import useWindowSize from '../../hook/useWindowSize';
 import device from '../../../styleConfigs/breakPoints';
 import Logo from './logo';
 
-const Layout = ({ children }) => {
-  const config = useContext(ConfigContext);
-  return (
-    <Wrap heightPx={config.device.windowHeight}>
-      <Logo />
-      <GeometricWrap>
-        <Geometric />
-      </GeometricWrap>
-      <MainWrap>{children}</MainWrap>
-    </Wrap>
-  );
-};
+const Layout = ({ children }) => (
+  <Wrap heightPx={useWindowSize().height}>
+    <Logo />
+    <GeometricWrap>
+      <Geometric />
+    </GeometricWrap>
+    <MainWrap>{children}</MainWrap>
+  </Wrap>
+);
 
 const Wrap = styled.div`
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: wrap;
-  height: ${({ heightPx }) => heightPx};
+  height: ${({ heightPx }) => heightPx}px;
   overflow: hidden;
   position: relative;
   width: 100%;

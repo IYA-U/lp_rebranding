@@ -27,11 +27,11 @@ const DarkKnight = () => (
   <>
     <KeyVisualPatternA
       bgImg={{
-        sp: '/static/img/jojo/sp/eyecatch.jpg',
-        pc: '/static/img/jojo/pc/eyecatch.jpg',
+        sp: '/static/img/darkKnight/eyecatch_sp.jpg',
+        pc: '/static/img/darkKnight/eyecatch.jpg',
       }}
       infoBlock={{
-        text: '舞台は2001年のイタリア<br/>今回のジョジョはギャングスター',
+        text: 'コウモリが世界を救う<br/>抱腹絶倒のアニマルコメディー',
       }}
     ></KeyVisualPatternA>
     <Text
