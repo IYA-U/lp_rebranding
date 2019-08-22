@@ -1,24 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
-import { Config } from '../../Layout/withLayout';
 
-const InfoBlock = () => {
-  const config = useContext(Config);
-  return (
-    <Wrap>
-      <Text
-        dangerouslySetInnerHTML={{
-          __html: '充実のライナップだよ',
-        }}
-      />
-      <img
-        src="/static/img/keyvisual/centerImage/teiichi.png"
-        alt="" />
-      <Cta>CTAボタン最大文字数17</Cta>
-    </Wrap>
-  );
-};
+const InfoBlock = () => (
+  <Wrap>
+    <Text
+      dangerouslySetInnerHTML={{
+        __html: '充実のライナップだよ',
+      }}
+    />
+    <img
+      src="/static/img/keyvisual/centerImage/teiichi.png"
+      alt="" />
+    <Cta>CTAボタン最大文字数17</Cta>
+  </Wrap>
+);
 
 const Text = styled.p`
   color: white;

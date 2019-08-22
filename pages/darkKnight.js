@@ -1,9 +1,8 @@
 import React from 'react';
 import withConfigProvider from '../components/hoc/withConfigProvider';
+import KeyVisualPatternA from '../components/keyvisual/PatternA';
 import Footer from '../components/common/Footer';
-
 import { Device, Spec, Feature } from '../components/service';
-
 import {
   Trailer, Cards, PictureFullWidth, Text,
 } from '../components/tetris';
@@ -26,6 +25,15 @@ const COLOR_CONFIG = {
 
 const DarkKnight = () => (
   <>
+    <KeyVisualPatternA
+      bgImg={{
+        sp: '/static/img/jojo/sp/eyecatch.jpg',
+        pc: '/static/img/jojo/pc/eyecatch.jpg',
+      }}
+      infoBlock={{
+        text: '舞台は2001年のイタリア<br/>今回のジョジョはギャングスター',
+      }}
+    ></KeyVisualPatternA>
     <Text
       colorPtnId="a"
       hdline="公開から10年が経った現在も、ヒーロー映画のベンチマークであり続けています。"

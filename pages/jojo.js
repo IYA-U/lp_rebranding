@@ -1,9 +1,8 @@
 import React from 'react';
 import withConfigProvider from '../components/hoc/withConfigProvider';
+import KeyVisualPatternA from '../components/keyvisual/PatternA';
 import Footer from '../components/common/Footer';
-
 import { Device, Spec, Feature } from '../components/service';
-
 import {
   Trailer, Cards, PictureFullWidth, Text,
 } from '../components/tetris';
@@ -26,6 +25,16 @@ const COLOR_CONFIG = {
 
 const Jojo = () => (
   <>
+    <KeyVisualPatternA
+      bgImg={{
+        sp: '/static/img/jojo/sp/eyecatch.jpg',
+        pc: '/static/img/jojo/pc/eyecatch.jpg',
+      }}
+      infoBlock={{
+        text: '舞台は2001年のイタリア<br/>今回のジョジョはギャングスター',
+      }}
+    ></KeyVisualPatternA>
+
     <Text
       colorPtnId="d"
       hdline="青年ジョルノ・ジョバァーナ、街から麻薬を排除するという夢があった。"
@@ -77,7 +86,7 @@ const Jojo = () => (
         },
       ]}
     />
-    {/* <PictureFullWidth
+    <PictureFullWidth
       srcPc="/static/img/jojo/pc/pictures.jpg"
       srcSp="/static/img/jojo/sp/pictures.jpg"
       alt="ジョジョのなんとかの冒険"
@@ -86,7 +95,7 @@ const Jojo = () => (
     <Feature colorPtnId="a" />
     <Device colorPtnId="a" />
     <Spec colorPtnId="a" />
-    <Footer colorPtnId="a" /> */}
+    <Footer colorPtnId="a" />
   </>
 );
 

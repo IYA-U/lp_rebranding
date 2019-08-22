@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import device from '../../styleConfigs/breakPoints';
+import Layout from './Common/Layout';
 import InfoBlockText from './Common/infoBlock--text';
 import InfoBlock from './Common/infoBlock';
 import { ConfigContext } from '../hoc/withConfigProvider';
 
-const PatternA = ({ subPattern }) => {
+const PatternA = ({ subPattern, bgImg, infoBlock }) => {
   const config = useContext(ConfigContext);
   const wrapConfig = {
     backgroundPosition: (() => {
@@ -28,23 +29,27 @@ const PatternA = ({ subPattern }) => {
   };
 
   return (
-    <>
-      <Wrap config={wrapConfig}>
+    <Layout>
+      <Wrap
+        config={wrapConfig}
+        bgImg={bgImg}>
         <MainBlock>
-          {config.device.isPc || config.subPattern === 'center' ? (
-            <InfoBlock />
+          {config.device.isPc || subPattern === 'center' ? (
+            <InfoBlock {...infoBlock} />
           ) : (
-            <InfoBlockText />
+            <InfoBlockText
+              colorPtnId="a"
+              {...infoBlock} />
           )}
         </MainBlock>
-        {!config.device.isPc && config.subPattern !== 'center' && <Gradient />}
+        {!config.device.isPc && subPattern !== 'center' && <Gradient />}
       </Wrap>
-    </>
+    </Layout>
   );
 };
 
 const Wrap = styled.div`
-  background-image: url('/static/img/keyvisual/main/sp/BRIDGE.png');
+  background-image: url('${({ bgImg }) => bgImg.sp}');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,7 +59,7 @@ const Wrap = styled.div`
   justify-content: ${({ config }) => config.justifyContent};
   position: relative;
   @media ${device.TAB} {
-    background-image: url('/static/img/keyvisual/main/pc/BRIDGE.png');
+    background-image: url('${({ bgImg }) => bgImg.pc}');
     background-position: ${({ config }) => config.backgroundPosition};
   }
   &:after {

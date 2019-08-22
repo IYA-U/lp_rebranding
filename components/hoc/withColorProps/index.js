@@ -25,7 +25,6 @@ const withColorPropsWithMap = (ChildComponent, COLOR_MAPS) => (props) => {
       colorName: colorNameMap[partName],
     });
   });
-
   return (
     <ThemeProvider theme={colorMap}>
       <ChildComponent {...props} />
