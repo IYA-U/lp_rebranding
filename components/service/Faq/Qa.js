@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import device from '../../../styleConfigs/breakPoints';
 
 const Qa = ({ data }) => {
   const [isOpen, setOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleQa = () => {
     setOpen(!isOpen);
   };
   return (
@@ -14,23 +13,21 @@ const Qa = ({ data }) => {
       <DefList>
         <DefTerm
           isOpen={isOpen}
-          onClick={toggleMenu}>
+          onClick={toggleQa}>
           {data.term}
           <Arrow
             isOpen={isOpen}
-            onClick={toggleMenu} />
+            onClick={toggleQa} />
         </DefTerm>
         <DefDes
           isOpen={isOpen}
-          onClick={toggleMenu}>
+          onClick={toggleQa}>
           {data.description}
         </DefDes>
       </DefList>
     </FaqList>
   );
 };
-
-Qa.propTypes = {};
 
 const FaqList = styled.li`
   height: auto;
