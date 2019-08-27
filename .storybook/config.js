@@ -1,8 +1,16 @@
 import React from 'react';
+import { setConfiguration } from 'react-grid-system';
+import breakPoints from '../styleConfigs/breakPoints';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withContexts } from '@storybook/addon-contexts/react';
-export const ConfigContext = React.createContext();
+import { contexts } from './contexts';
+import { ConfigContext } from '../hoc/withConfigProvider';
 import GlobalStyle from '../styleConfigs/globalStyle';
+
+setConfiguration({
+  gutterWidth: '5',
+  breakPoints,
+});
 
 const defaultTheme = {
   colorConfig: {

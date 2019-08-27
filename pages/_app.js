@@ -20,10 +20,7 @@ export default class MyApp extends App {
         <Head>
           <title key="title">新LP実験</title>
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
         <GlobalStyle />
         <Component {...pageProps} />
