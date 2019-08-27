@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 export const FaqBody = styled.div`
   color: #505050;
   height: auto;
   position: relative;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     max-width: 1152px;
     margin: 0 auto;
   }
@@ -22,7 +22,7 @@ export const Title = styled.h2`
   span {
     color: ${({ theme }) => theme.colorConfig.colors.dark};
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 36px;
     display: block;
     text-align: center;
@@ -35,6 +35,6 @@ export const FaqWrap = styled.ul`
   margin: 0;
   padding: 0;
   position: relative;
-  @media ${device.TAB} {
+  @media ${media.md} {
   }
 `;

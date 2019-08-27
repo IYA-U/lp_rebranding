@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Thumbnail = ({ text, thumbnail, sid }) => (
   <CardLink href={`https://www.video.unext.jp/title/${sid}`}>
@@ -23,7 +23,7 @@ const CardTextWrap = styled.div`
   height: 50px;
   position: relative;
   width: 100%;
-  @media ${device.PC} {
+  @media ${media.lg} {
     height: 60px;
   }
   &:before {
@@ -40,7 +40,7 @@ const CardTextWrap = styled.div`
     transform: rotate(45deg);
     width: 12px;
     z-index: 2;
-    @media ${device.PC} {
+    @media ${media.lg} {
       right: 6%;
       width: 14px;
       height: 14px;
@@ -55,7 +55,7 @@ const CardTextWrap = styled.div`
     right: 0;
     top: 0;
     width: 15%;
-    @media ${device.PC} {
+    @media ${media.lg} {
       width: 15%;
       height: 100%;
     }
@@ -75,7 +75,7 @@ const CardText = styled.p`
     text-decoration: none;
   }
 
-  @media ${device.PC} {
+  @media ${media.lg} {
     font-size: 18px;
     padding: 0 80px 0 22px;
     line-height: 60px;
@@ -91,7 +91,7 @@ const CardLink = styled.a`
   display: block;
   margin: 30px 10px 0;
   text-decoration: none;
-  @media ${device.PC} {
+  @media ${media.lg} {
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);
     margin: 60px 10px 0;
   }

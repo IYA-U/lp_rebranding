@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 import { ConfigContext } from '../../../hoc/withConfigProvider';
 
@@ -18,9 +18,7 @@ const Panel = ({ numStr, title, filter }) => {
   };
 
   return (
-    <Wrap
-      onClick={handleClick}
-      filter={filter}>
+    <Wrap onClick={handleClick} filter={filter}>
       <Main>
         <h3>{numStr}</h3>
         <h4 dangerouslySetInnerHTML={{ __html: title }}></h4>
@@ -47,7 +45,7 @@ const Wrap = styled.div`
 
 const Main = styled.div`
   padding: 35px 28px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding: 40px 40px 50px;
   }
   h3 {
@@ -73,7 +71,7 @@ const PcText = styled.div`
   display: none;
   padding-top: 20px;
   text-align: justify;
-  @media ${device.TAB} {
+  @media ${media.md} {
     display: block;
   }
 `;

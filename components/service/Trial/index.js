@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const TOKUTEN = [
   {
@@ -38,7 +38,7 @@ const Trial = () => (
 );
 
 const Wrap = styled.div`
-  @media ${device.PC} {
+  @media ${media.lg} {
     max-width: 800px;
     margin: 0 auto;
   }
@@ -50,7 +50,7 @@ const TokurenWrap = styled.ul`
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 40px 10px;
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 0 20px;
     background-color: transparent;
   }
@@ -58,7 +58,7 @@ const TokurenWrap = styled.ul`
 
 const CardWrap = styled.div`
   width: calc(50% - 5px);
-  @media ${device.PC} {
+  @media ${media.lg} {
     width: calc(50% - 20px);
   }
 `;
@@ -68,7 +68,7 @@ const TextExe = styled.p`
   font-size: 14px;
   line-height: 1.5;
   padding: 20px 20px 0;
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin-top: 20px;
     font-size: 24px;
     text-align: center;
@@ -83,7 +83,7 @@ const Title = styled.h2`
   span {
     color: ${({ theme }) => theme.dark};
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 36px;
     display: block;
     text-align: center;
@@ -92,7 +92,7 @@ const Title = styled.h2`
 `;
 
 const Br = styled.br`
-  @media ${device.TAB} {
+  @media ${media.md} {
     display: none;
   }
 `;

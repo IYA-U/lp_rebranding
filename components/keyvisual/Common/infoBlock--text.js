@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import withColorProps from '../../../hoc/withColorProps';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const COLOR_MAP = {
   light: {
@@ -35,7 +35,7 @@ const Text = styled.p`
   line-height: 1.45;
   margin-top: 0.5rem;
   text-align: center;
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 26px;
   }
 `;

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system';
-import device from '../../styleConfigs/breakPoints';
-import SubPatternWrap from './common/SubPatternWrap';
+import { media } from '../../styleConfigs/breakPoints';
 
 const PictureText = ({ paragraph, subhead, picture }) => (
   <Wrap>
@@ -10,7 +9,7 @@ const PictureText = ({ paragraph, subhead, picture }) => (
       <Row>
         <Col sm={12} md={6}>
           <ImgWrap>
-            <img src={picture} />
+            <img src={picture} alt="" />
           </ImgWrap>
         </Col>
         <Col sm={12} md={6}>
@@ -23,10 +22,10 @@ const PictureText = ({ paragraph, subhead, picture }) => (
 );
 
 const ImgWrap = styled.div`
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding-right: 20px;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding-right: 40px;
   }
 `;
@@ -37,7 +36,7 @@ const Subhead = styled.h3`
   line-height: 1.4;
   margin-top: 20px;
   text-align: left;
-  @media ${device.TAB} {
+  @media ${media.md} {
     margin-top: 0px;
   }
 `;
@@ -46,7 +45,7 @@ const Paragraph = styled.p`
   font-size: 16px;
   margin-top: 20px;
   text-align: justify;
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin: 40px auto;
   }
 `;
@@ -54,10 +53,10 @@ const Paragraph = styled.p`
 const Wrap = styled.div`
   margin: 60px 0;
   padding: 0 20px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     margin: 90px 0;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin: 120px 0;
   }
 `;

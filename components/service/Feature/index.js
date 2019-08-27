@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import COLOR_MAP from './COLOR_MAP';
 import withColorPropsWithMap from '../../../hoc/withColorProps';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 import Panel from './Panel';
 
-const Feature = ({ title }) => (
+const Feature = () => (
   <Wrap>
     <Title>
       見放題作品数No.1
@@ -35,10 +35,8 @@ const Feature = ({ title }) => (
           title: '解約は<br/>いつでも簡単。',
           filter: 'brightness(90%)',
         },
-      ].map((params) => (
-        <Panel
-          {...params}
-          key={params.numStr} />
+      ].map(params => (
+        <Panel {...params} key={params.numStr} />
       ))}
     </PanelWrap>
   </Wrap>
@@ -56,7 +54,7 @@ const Title = styled.h2`
   span {
     color: ${({ theme }) => theme.titleAccent};
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 36px;
     display: block;
     text-align: center;
@@ -67,13 +65,13 @@ const Title = styled.h2`
 const PanelWrap = styled.div`
   display: flex;
   flex-direction: column;
-  @media ${device.TAB} {
+  @media ${media.md} {
     flex-direction: row;
   }
 `;
 
 const Br = styled.br`
-  @media ${device.TAB} {
+  @media ${media.md} {
     display: none;
   }
 `;

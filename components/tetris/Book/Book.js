@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Book = ({ img, link, alt }) => (
   <Wrap>

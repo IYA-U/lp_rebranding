@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system';
-import device from '../../styleConfigs/breakPoints';
+import { media } from '../../styleConfigs/breakPoints';
 import SubPatternWrap from './common/SubPatternWrap';
 
 const Picture = ({ pictures }) => {
@@ -63,10 +63,10 @@ const Picture = ({ pictures }) => {
 const Wrap = styled.div`
   margin: 60px 0;
   padding: 0 20px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     margin: 90px 0;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin: 120px 0;
   }
 `;

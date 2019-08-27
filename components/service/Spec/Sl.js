@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Sl = (props) => (
   <SpecList>
@@ -24,7 +24,7 @@ const SpecList = styled.li`
   &:nth-child(even) {
     background-color: ${({ theme }) => theme.rowEven};
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding: 3rem 6rem;
   }
 `;
@@ -43,7 +43,7 @@ const DefList = styled.dl`
       border-bottom: 1px solid #505050;
     }
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 20px;
     line-height: 3rem;
   }
@@ -62,7 +62,7 @@ const DefTerm = styled.dt`
     font-weight: inherit;
     line-height: inherit;
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
   }
 `;
 
@@ -80,12 +80,12 @@ const DefDes = styled.dd`
       height: auto;
       margin: auto;
       width: 14px;
-      @media ${device.TAB} {
+      @media ${media.md} {
         width: 28px;
       }
     }
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
     width: 210px;
     text-align: center;
   }

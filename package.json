@@ -27,7 +27,9 @@
   },
   "prettier": {
     "singleQuote": true,
-    "trailingComma": "all"
+    "trailingComma": "all",
+    "printWidth": 120,
+    "tabWidth": 2
   },
   "repository": {
     "type": "git",
@@ -71,11 +73,11 @@
   "eslintConfig": {
     "parser": "babel-eslint",
     "rules": {
-      "arrow-parens": "off",
       "jsx-a11y/anchor-is-valid": "off",
       "no-console": 1,
       "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn"
+      "react-hooks/exhaustive-deps": "warn",
+      "react/prop-types": 0
     },
     "env": {
       "browser": true,

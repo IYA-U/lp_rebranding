@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { useSpring, useTrail, animated } from 'react-spring';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 import { Config } from '../../Layout/withLayout';
 
 const InfoBlock = () => {
@@ -106,7 +106,7 @@ const Text = styled(animated.p)`
   margin-top: 10px;
   width: 100%;
 
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 26px;
   }
 `;

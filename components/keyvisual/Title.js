@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import device from '../../styleConfigs/breakPoints';
+import { media } from '../../styleConfigs/breakPoints';
 
 export const Config = React.createContext();
 class Title extends Component {
@@ -133,7 +133,7 @@ const MainBlock = styled.div`
   position: relative;
   width: 100%;
   z-index: 5;
-  @media ${device.TAB} {
+  @media ${media.md} {
     background-color: #192330;
     display: flex;
     flex-direction: row-reverse;
@@ -148,7 +148,7 @@ const ImageWrap = styled.div`
   min-width: 0;
   position: relative;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     min-width: 500px;
     width: 70%;
   }
@@ -162,7 +162,7 @@ const TitleText = styled.h1`
   margin-top: 0px;
   text-align: left;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 45px;
     margin-top: 0;
     text-align: left;
@@ -177,7 +177,7 @@ const InfoWrap = styled.div`
   justify-content: center;
   padding: 0;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding: 30px;
     width: 30%;
   }
@@ -188,7 +188,7 @@ const Catch = styled.p`
   line-height: 1.5;
   margin-top: 10px;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 22px;
   }
 `;

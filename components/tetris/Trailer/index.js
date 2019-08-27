@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'react-grid-system';
+import { Container } from 'react-grid-system';
 
 import COLOR_MAPS from './COLOR_MAPS';
 import withColorPropsWithMap from '../../../hoc/withColorProps';
-import device from '../../../styleConfigs/breakPoints';
-import SubPatternWrap from '../common/SubPatternWrap';
+import { media } from '../../../styleConfigs/breakPoints';
 import Video from './Video';
 
 const Trailer = ({ texts, video }) => {
@@ -44,21 +43,21 @@ const BackGround = styled.div`
 
 const Wrap = styled.div`
   padding: 40px 20px;
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 60px 0;
   }
 `;
 
 const WrapText = styled.div`
   padding: 90px 20px;
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 190px 0;
   }
 `;
 
 const VideoWrapText = styled.div`
   margin-top: 20px;
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin-top: 0;
     max-width: 1200px;
   }
@@ -70,7 +69,7 @@ const HdlineText = styled.h2`
   font-weight: bold;
   margin-bottom: 40px;
   text-align: center;
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 45px;
     margin-bottom: 60px;
   }

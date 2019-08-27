@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system';
 import Book from './Book';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Books = ({ hdline, books }) => (
   <Wrap>
@@ -26,7 +26,7 @@ const Books = ({ hdline, books }) => (
 const Wrap = styled.div`
   background-color: ${({ theme }) => theme.colorConfig.colors.bright};
   padding: 90px 8px;
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 180px 0;
   }
 `;
@@ -38,14 +38,14 @@ const Title = styled.h2`
   letter-spacing: 0.2rem;
   margin: 0 auto;
   text-align: center;
-  @media ${device.PC} {
+  @media ${media.lg} {
     font-size: 4.4rem;
   }
 `;
 
 const BookWrap = styled.div`
   margin: 30px 5px 0;
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin: 60px 10px 0;
   }
 `;

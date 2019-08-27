@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import device from '../../styleConfigs/breakPoints';
+import { media } from '../../styleConfigs/breakPoints';
 
 import InfoBlock from './Common/infoBlock';
 
@@ -16,9 +16,7 @@ const PatternB = () => (
           media="(min-width: 640px)"
           srcSet="/static/img/keyvisual/main/sp/scroll-horizontal.jpg"
         />
-        <img
-          src="/static/img/keyvisual/main/pc/scroll-horizontal.jpg"
-          alt="" />
+        <img src="/static/img/keyvisual/main/pc/scroll-horizontal.jpg" alt="" />
       </picture>
     </PictureArea>
     <InfoArea>
@@ -34,7 +32,7 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
   position: relative;
-  @media ${device.TAB} {
+  @media ${media.md} {
     flex-direction: row-reverse;
   }
 `;
@@ -48,7 +46,7 @@ const InfoArea = styled.div`
   position: relative;
   width: 100%;
   z-index: 5;
-  @media ${device.TAB} {
+  @media ${media.md} {
     height: 100%;
     width: 40%;
   }
@@ -68,7 +66,7 @@ const PictureArea = styled.div`
   height: 60%;
   overflow: hidden;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     height: 100%;
     width: 60%;
   }
@@ -78,7 +76,7 @@ const PictureArea = styled.div`
     max-height: 100%;
     max-width: none;
     width: auto;
-    @media ${device.TAB} {
+    @media ${media.md} {
       height: 100%;
     }
   }

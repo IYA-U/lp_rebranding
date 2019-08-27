@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import device from '../../styleConfigs/breakPoints';
+import { media } from '../../styleConfigs/breakPoints';
 import InfoBlock from './Common/infoBlock--animated';
 import ThumbNails from './Common/thumbnails--animated';
 
@@ -34,7 +34,7 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
   position: relative;
-  @media ${device.TAB} {
+  @media ${media.md} {
     flex-direction: row-reverse;
   }
 `;
@@ -51,7 +51,7 @@ const InfoArea = styled(animated.div)`
   position: absolute;
   width: 100%;
   z-index: 5;
-  @media ${device.TAB} {
+  @media ${media.md} {
     height: 100%;
     width: 40%;
   }
@@ -64,7 +64,7 @@ const PictureArea = styled.div`
   position: relative;
   top: 0;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     height: 100%;
     width: 60%;
   }

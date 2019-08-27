@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Qa = ({ data }) => {
   const [isOpen, setOpen] = useState(false);
@@ -54,7 +54,7 @@ const DefTerm = styled.dt`
   position: relative;
   vertical-align: middle;
   cursor:pointer;
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 2rem;
     line-height: 3rem;
     padding: 3.8rem 6rem 3.4rem 6rem;
@@ -72,7 +72,7 @@ const DefDes = styled.dd`
   padding-top: ${({ isOpen }) => (isOpen ? '3.2rem' : '0')};
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
-  @media ${device.TAB} {
+  @media ${media.md} {
     margin-top: 0.4rem;
     padding-left: 6rem;
     padding-right: 6rem;
@@ -86,7 +86,7 @@ const DefDes = styled.dd`
     text-align: justify;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
-    @media ${device.TAB} {
+    @media ${media.md} {
       font-size: 1.8rem;
       line-height: 2;
     }
@@ -104,7 +104,7 @@ const Arrow = styled.span`
   top: 0;
 
   width: 15px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     width: 18px;
     height: 2px;
   }
@@ -122,7 +122,7 @@ const Arrow = styled.span`
     transform: rotate(${({ isOpen }) => (isOpen ? '90deg' : '180deg')});
     transition-duration: 0.5s;
     width: 2px;
-    @media ${device.TAB} {
+    @media ${media.md} {
       width: 2px;
       height: 18px;
     }

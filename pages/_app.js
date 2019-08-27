@@ -2,12 +2,14 @@ import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
 import { setConfiguration } from 'react-grid-system';
+import breakPoints from '../styleConfigs/breakPoints';
 import GlobalStyle from '../styleConfigs/globalStyle';
 export default class MyApp extends App {
   constructor(props) {
     super(props);
     setConfiguration({
       gutterWidth: '5',
+      breakPoints,
     });
   }
 

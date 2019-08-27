@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import withColorProps from '../../../hoc/withColorProps';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const COLOR_MAP = {
   light: {
@@ -23,8 +23,7 @@ const InfoBlock = ({ text }) => (
         __html: text,
       }}
     />
-    <img src="/static/img/keyvisual/centerImage/teiichi.png"
-alt="" />
+    <img src="/static/img/keyvisual/centerImage/teiichi.png" alt="" />
     <Cta>CTAボタン最大文字数17</Cta>
   </Wrap>
 );
@@ -34,7 +33,7 @@ const Text = styled.p`
   font-size: 18px;
   line-height: 1.45;
   text-align: center;
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 26px;
   }
 `;

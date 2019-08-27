@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../styleConfigs/breakPoints';
-import useWindowSize from '../hook/useWindowSize';
+import { media } from '../../styleConfigs/breakPoints';
+import useWindowSize from '../../hook/useWindowSize';
 import Layout from './Common/Layout';
 import InfoBlockText from './Common/infoBlock--text';
 import InfoBlock from './Common/infoBlock';
@@ -30,18 +30,12 @@ const PatternA = ({ subPattern, bgImg, infoBlock }) => {
 
   return (
     <Layout>
-      <Wrap
-        config={wrapConfig}
-        bgImg={bgImg}>
+      <Wrap config={wrapConfig} bgImg={bgImg}>
         <MainBlock>
           {windowSize.isPC || subPattern === 'center' ? (
-            <InfoBlock
-              {...infoBlock}
-              colorPtnId="a" />
+            <InfoBlock {...infoBlock} colorPtnId="a" />
           ) : (
-            <InfoBlockText
-              colorPtnId="a"
-              {...infoBlock} />
+            <InfoBlockText colorPtnId="a" {...infoBlock} />
           )}
         </MainBlock>
         {!windowSize.isPC && subPattern !== 'center' && <Gradient />}
@@ -60,7 +54,7 @@ const Wrap = styled.div`
   height: 100%;
   justify-content: ${({ config }) => config.justifyContent};
   position: relative;
-  @media ${device.TAB} {
+  @media ${media.md} {
     background-image: url('${({ bgImg }) => bgImg.pc}');
     background-position: ${({ config }) => config.backgroundPosition};
     flex-direction: row-reverse; 
@@ -68,7 +62,8 @@ const Wrap = styled.div`
   &:after {
     background-color: rgba(0, 0, 0, 0.4);
     content: '';
-    display: ${({ theme }) => theme.subPattern === 'center' ? 'block' : 'none'};
+    display: ${({ theme }) =>
+      theme.subPattern === 'center' ? 'block' : 'none'};
     height: 100%;
     position: absolute;
     width: 100%;
@@ -83,7 +78,7 @@ const MainBlock = styled.div`
   position: relative;
   width: 100%;
   z-index: 5;
-  @media ${device.TAB} {
+  @media ${media.md} {
     height: 100%;
     width: 50%;
   }

@@ -1,18 +1,18 @@
 import styled from 'styled-components';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 export const Wrap = styled.div`
   background-color: ${({ theme }) => theme.background};
   padding-bottom: 60px;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding-bottom: 120px;
   }
 `;
 
 export const SpecBody = styled.div`
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     max-width: 1152px;
     margin: 0 auto;
   }
@@ -23,7 +23,7 @@ export const Title = styled.h2`
   font-size: 32px;
   line-height: 1.4;
   padding: 45px 30px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 36px;
     display: block;
     text-align: center;
@@ -32,7 +32,7 @@ export const Title = styled.h2`
 `;
 
 export const Br = styled.br`
-  @media ${device.TAB} {
+  @media ${media.md} {
     display: none;
   }
 `;
@@ -46,7 +46,7 @@ export const DefaultWrap = styled.div`
   & > ul {
     & > li:nth-child(n + 6) {
       display: none;
-      @media ${device.TAB} {
+      @media ${media.md} {
         display: block;
       }
     }
@@ -55,7 +55,7 @@ export const DefaultWrap = styled.div`
 
 export const MoreWrap = styled.div`
   & > ul {
-    @media ${device.TAB} {
+    @media ${media.md} {
       display: none;
     }
     & > li:nth-child(-n + 5) {
@@ -77,7 +77,7 @@ export const TogglerWrap = styled.div`
     padding-left: 0.4rem;
     position: relative;
   }
-  @media ${device.TAB} {
+  @media ${media.md} {
     display: none;
   }
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system';
-import device from '../../styleConfigs/breakPoints';
+import { media } from '../../styleConfigs/breakPoints';
 
 const HorizontalCard = ({
   hdline, paragraph, isLeft, is64,
@@ -20,12 +20,12 @@ const HorizontalCard = ({
 const Wrap = styled.div`
   margin-top: 40px;
   padding: 0 20px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     display: flex;
     align-items: stretch;
     flex-direction: ${({ isLeft }) => (isLeft ? 'row-reverse' : 'row')};
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 0;
   }
 `;
@@ -35,7 +35,7 @@ const ImgArea = styled.div`
   background-position: center;
   background-size: cover;
   height: 265px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     width: ${({ is64 }) => (is64 ? '60%' : '50%')};
     height: auto;
   }
@@ -46,7 +46,7 @@ const TextArea = styled.div`
   color: white;
   padding: 30px 15px 60px;
   text-align: justify;
-  @media ${device.TAB} {
+  @media ${media.md} {
     width: ${({ is64 }) => (is64 ? '40%' : '50%')};
     padding: 80px 40px;
   }
@@ -58,7 +58,7 @@ const H1 = styled.div`
   line-height: 1.4;
   text-align: left;
 
-  @media ${device.PC} {
+  @media ${media.lg} {
     font-size: 34px;
     margin-top: 36px;
   }
@@ -67,7 +67,7 @@ const H1 = styled.div`
 const Text = styled.p`
   margin-top: 16px;
   text-align: justify;
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin-top: 36px;
   }
 `;

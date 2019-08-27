@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Card = ({
   img, lead, title, paragraph, colors,
@@ -21,12 +21,12 @@ const Wrap = styled.div`
   background-color: ${({ theme }) => theme.cardBody};
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   margin-top: 30px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     margin-top: 30px;
     margin-left: 10px;
     margin-right: 10px;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin-top: 60px;
     margin-left: 6px;
     margin-right: 6px;
@@ -48,9 +48,9 @@ const ImgBox = styled.div`
     top: 50%;
     transform: translate(-50%, -50%);
     width: auto;
-    @media ${device.TAB} {
+    @media ${media.md} {
     }
-    @media ${device.PC} {
+    @media ${media.lg} {
     }
   }
 `;
@@ -58,11 +58,11 @@ const ImgBox = styled.div`
 const TextArea = styled.div`
   color: ${({ theme }) => theme.cardText};
   padding: 30px 20px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding: 40px 23px;
     min-height: 360px;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 40px 23px;
     min-height: 370px;
   }
@@ -77,7 +77,7 @@ const TextArea = styled.div`
     font-weight: bold;
     line-height: 1;
     line-height: 1.5;
-    @media ${device.PC} {
+    @media ${media.lg} {
       font-size: 2.6rem;
     }
   }

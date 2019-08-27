@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Titles = () => (
   <Wrap>
@@ -22,7 +22,7 @@ const Titles = () => (
 
 const Wrap = styled.div`
   margin-top: 60px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     margin-top: 120px;
   }
 `;

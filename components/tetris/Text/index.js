@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import withColorsProp from '../../../hoc/withColorProps';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 import COLOR_MAPS from './COLOR_MAPS';
 
 const Text = ({ hdline, paragraph, bgImg }) => (
@@ -22,11 +22,11 @@ const Hdline = styled.h2`
   margin: 0 auto;
   text-align: left;
 
-  @media ${device.TAB} {
+  @media ${media.md} {
     font-size: 32px;
     text-align: center;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     font-size: 44px;
   }
 `;
@@ -36,11 +36,11 @@ const Paragraph = styled.p`
   font-size: 16px;
   margin: 40px auto 0 auto;
   text-align: justify;
-  @media ${device.TAB} {
+  @media ${media.md} {
     margin: 40px auto 0 auto;
     max-width: 640px;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     margin: 80px auto 0 auto;
     max-width: 640px;
   }
@@ -51,7 +51,7 @@ const BgColor = styled.div`
   opacity: ${({ theme }) => theme.background};
   opacity: 1;
   padding: 45px 20px 80px;
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 300px 0 300px;
   }
 `;

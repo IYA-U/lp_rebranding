@@ -6,7 +6,7 @@ import COLOR_MAPS from './COLOR_MAPS';
 import withColorPropsWithMap from '../../../hoc/withColorProps';
 
 import Card from './Card';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Cards = ({ cards, colors }) => {
   const isOdd = cards.length % 2 > 0;
@@ -39,7 +39,7 @@ const Cards = ({ cards, colors }) => {
 const CardsArea = styled.div`
   background-color: ${({ theme }) => theme.background};
   padding: 90px 0 70px;
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 200px 0 180px;
   }
 `;
@@ -51,7 +51,7 @@ const Title = styled.h2`
   letter-spacing: 0.2rem;
   margin: 0 auto;
   text-align: center;
-  @media ${device.PC} {
+  @media ${media.lg} {
     font-size: 4.4rem;
   }
 `;
@@ -63,7 +63,7 @@ const Lead = styled.p`
   line-height: 1.8;
   margin: 20px auto 0 auto;
   text-align: justify;
-  @media ${device.PC} {
+  @media ${media.lg} {
     font-weight: 400;
     max-width: 640px;
     margin: 60px auto 0 auto;
@@ -72,10 +72,10 @@ const Lead = styled.p`
 
 const Wrap = styled.div`
   padding: 0 20px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding: 0 10px;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 0;
     margin: 0 -10px;
   }

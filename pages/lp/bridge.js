@@ -1,9 +1,9 @@
 import React from 'react';
-import withConfigProvider from '../hoc/withConfigProvider';
-import Footer from '../components/common/Footer';
+import withConfigProvider from '../../hoc/withConfigProvider';
+import Footer from '../../components/common/Footer';
 
-import { Device, Spec, Feature } from '../components/service';
-import { Trailer, Text } from '../components/tetris';
+import { Device, Spec, Feature } from '../../components/service';
+import { Trailer, Text } from '../../components/tetris';
 
 const COLOR_CONFIG = {
   mode: 'light',

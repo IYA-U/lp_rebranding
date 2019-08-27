@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import device from '../../styleConfigs/breakPoints';
+import { media } from '../../styleConfigs/breakPoints';
 
 const Footer = () => (
   <Wrap>
@@ -16,7 +16,7 @@ const Wrap = styled.div`
   background-size: auto 150px;
   height: 150px;
   position: relative;
-  @media ${device.TAB} {
+  @media ${media.md} {
     background-image: url('/static/img/footer/footer_bg_pc.png');
     height: 300px;
     background-size: auto 300px;
@@ -29,7 +29,7 @@ const Img = styled.img`
   position: absolute;
   top: 0;
   width: 125px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     width: 260px;
     left: 184px;
   }

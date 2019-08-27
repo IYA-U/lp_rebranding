@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col } from 'react-grid-system';
 import Thumbnail from './Thumbnail';
-import device from '../../../styleConfigs/breakPoints';
+import { media } from '../../../styleConfigs/breakPoints';
 
 const Thumbnails = ({ thumbnails, title }) => {
   const isOdd = thumbnails.length % 2 > 0;
@@ -28,10 +28,10 @@ const Thumbnails = ({ thumbnails, title }) => {
 const Wrap = styled.div`
   background-color: #fff;
   padding: 90px 10px 70px;
-  @media ${device.TAB} {
+  @media ${media.md} {
     padding: 100px 10px 80px;
   }
-  @media ${device.PC} {
+  @media ${media.lg} {
     padding: 100px 10px 80px;
     margin: 0 -10px;
   }
@@ -45,7 +45,7 @@ const Title = styled.h2`
   line-height: 1.4;
   margin: 0 auto 10px auto;
   text-align: center;
-  @media ${device.PC} {
+  @media ${media.lg} {
     font-size: 4.4rem;
     margin: 0 auto 20px auto;
   }

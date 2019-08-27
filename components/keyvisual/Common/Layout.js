@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import useWindowSize from '../../hook/useWindowSize';
-import device from '../../../styleConfigs/breakPoints';
+import useWindowSize from '../../../hook/useWindowSize';
+import { media } from '../../../styleConfigs/breakPoints';
 import Logo from './logo';
 
 const Layout = ({ children }) => (
@@ -22,7 +22,7 @@ const Wrap = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     flex-direction: 'row';
   }
 `;
@@ -31,7 +31,7 @@ const GeometricWrap = styled.div`
   height: 60px;
   overflow: hidden;
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     height: 100%;
     width: 75px;
   }
@@ -40,7 +40,7 @@ const GeometricWrap = styled.div`
 const MainWrap = styled.div`
   height: calc(100% - 60px);
   width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     height: 100%;
     width: calc(100% - 75px);
   }
@@ -53,7 +53,7 @@ const Geometric = styled.div`
   display: block;
   height: 60px;
   max-width: 100%;
-  @media ${device.TAB} {
+  @media ${media.md} {
     background-size: 75px auto;
     top: 80px;
     max-width: 80px;
