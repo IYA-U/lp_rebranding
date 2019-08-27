@@ -22,7 +22,7 @@ const Qa = ({ data }) => {
         <DefDes
           isOpen={isOpen}
           onClick={toggleQa}>
-          {data.description}
+          <p> {data.description}</p>
         </DefDes>
       </DefList>
     </FaqList>
@@ -64,21 +64,32 @@ const DefTerm = styled.dt`
 
 const DefDes = styled.dd`
   background-color: #f2f2f2;
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
-  font-size: 1.4rem;
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-  line-height: 1.9;
+
   margin-top: 0.2rem;
-  padding: 3rem 3.2rem;
-  text-align: justify;
+  padding-bottom: ${({ isOpen }) => (isOpen ? '3.2rem' : '0')};
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: ${({ isOpen }) => (isOpen ? '3.2rem' : '0')};
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
   @media ${device.TAB} {
     margin-top: 0.4rem;
-    padding: 3.2rem 6rem;
-    font-size: 1.8rem;
-    line-height: 2;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  p {
+    display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    line-height: 1.9;
+    text-align: justify;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    @media ${device.TAB} {
+      font-size: 1.8rem;
+      line-height: 2;
+    }
   }
 `;
 
