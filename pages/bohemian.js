@@ -1,5 +1,5 @@
 import React from 'react';
-import withConfigProvider from '../components/hoc/withConfigProvider';
+import withConfigProvider from '../hoc/withConfigProvider';
 import Footer from '../components/common/Footer';
 
 import { Device, Spec, Feature } from '../components/service';

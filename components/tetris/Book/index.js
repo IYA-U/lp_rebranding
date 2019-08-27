@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-grid-system';
 import Book from './Book';
 import device from '../../../styleConfigs/breakPoints';
 
@@ -12,10 +12,7 @@ const Books = ({ hdline, books }) => (
       </Row>
       <Row>
         {books.books.map((book, index) => (
-          <Col
-            key={index}
-            xs="6"
-            md="3">
+          <Col key={index} sm={6} md={3}>
             <BookWrap>
               <Book {...book} />
             </BookWrap>

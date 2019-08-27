@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-grid-system';
 
 import COLOR_MAPS from './COLOR_MAPS';
 import withColorPropsWithMap from '../../../hoc/withColorProps';
@@ -25,14 +25,8 @@ const Cards = ({ cards, colors }) => {
           </Row>
           <Row>
             {cards.map((card, index) => (
-              <Col
-                key={index}
-                xs="12"
-                md="6"
-                lg={isOdd ? 4 : 3}>
-                <Card
-                  {...card}
-                  colors={colors} />
+              <Col key={index} sm={12} md={6} lg={isOdd ? 4 : 3}>
+                <Card {...card} colors={colors} />
               </Col>
             ))}
           </Row>

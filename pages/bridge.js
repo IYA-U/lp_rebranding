@@ -1,9 +1,9 @@
 import React from 'react';
-import withConfigProvider from '../components/hoc/withConfigProvider';
+import withConfigProvider from '../hoc/withConfigProvider';
 import Footer from '../components/common/Footer';
 
 import { Device, Spec, Feature } from '../components/service';
-import { Trailer, PictureFullWidth, Text } from '../components/tetris';
+import { Trailer, Text } from '../components/tetris';
 
 const COLOR_CONFIG = {
   mode: 'light',
@@ -38,8 +38,10 @@ const Bridge = () => (
       video={{
         m3u8:
           'https://streamh01.nxtv.jp/hls03/special/unext_promotion/twd_s9_2_trailer/hls/twd_s9_2_trailer/twd_s9_2_trailer.m3u8',
-        mp4: 'https://streamh01.nxtv.jp/hls03/special/unext_promotion/twd_s9_2_trailer/mp4/twd_s9_2_trailer.mp4',
-        webm: 'https://streamh01.nxtv.jp/hls03/special/unext_promotion/twd_s9_2_trailer/webm/twd_s9_2_trailer.webm',
+        mp4:
+          'https://streamh01.nxtv.jp/hls03/special/unext_promotion/twd_s9_2_trailer/mp4/twd_s9_2_trailer.mp4',
+        webm:
+          'https://streamh01.nxtv.jp/hls03/special/unext_promotion/twd_s9_2_trailer/webm/twd_s9_2_trailer.webm',
         poster: '/static/img/bridge/trailerfuta@2x.jpg',
       }}
     />

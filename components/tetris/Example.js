@@ -1,17 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-grid-system';
 
 const Example = () => (
   <Wrap>
     <Container>
       <ContainerInner>
         <Row noGutters>
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((num) => (
-            <Col
-              xs="2"
-              xl="1"
-              key={num}>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(num => (
+            <Col sm={2} xl={1} key={num}>
               <ColInner isOdd={num % 2 === 0}>{num}</ColInner>
             </Col>
           ))}

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  Container, Row, Col, UncontrolledCollapse,
-} from 'reactstrap';
+import { Container, Row, Col } from 'react-grid-system';
 
 import COLOR_MAP from './COLOR_MAP';
 import withColorPropsWithMap from '../../../hoc/withColorProps';
@@ -25,7 +23,7 @@ const Spec = () => (
   <Wrap>
     <Container>
       <Row>
-        <Col xs="12">
+        <Col sm={12}>
           <SpecBody>
             <Title>
               サービススペックと<Br></Br>利用料金
@@ -33,9 +31,7 @@ const Spec = () => (
             <DefaultWrap>
               <SpecWrap>
                 {constants.map((list, index) => (
-                  <Sl
-                    data={list}
-                    key={index} />
+                  <Sl data={list} key={index} />
                 ))}
               </SpecWrap>
             </DefaultWrap>
@@ -44,17 +40,13 @@ const Spec = () => (
               <p id="toggler">
                 もっと見る<Arrow></Arrow>
               </p>
-              <UncontrolledCollapse toggler="#toggler">
-                <MoreWrap>
-                  <SpecWrap>
-                    {constants.map((list, index) => (
-                      <Sl
-                        data={list}
-                        key={index} />
-                    ))}
-                  </SpecWrap>
-                </MoreWrap>
-              </UncontrolledCollapse>
+              <MoreWrap>
+                <SpecWrap>
+                  {constants.map((list, index) => (
+                    <Sl data={list} key={index} />
+                  ))}
+                </SpecWrap>
+              </MoreWrap>
             </TogglerWrap>
             {/* ▲スマホのみ表示 accordion */}
           </SpecBody>

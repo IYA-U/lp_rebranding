@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-grid-system';
 import styled from 'styled-components';
 
 const Switcher = () => (
@@ -27,15 +27,11 @@ const Switcher = () => (
           name: 'Title',
           path: '/keyvisual?pattern=Title&sid=SID0036791',
         },
-      ].map((config) => (
-        <Row
-          style={{ marginTop: '5px' }}
-          key={config.name}>
-          <Col xs={{ size: 10, offset: 1 }}>
+      ].map(config => (
+        <Row style={{ marginTop: '5px' }} key={config.name}>
+          <Col sm={{ size: 10, offset: 1 }}>
             <a href={config.path}>
-              <Button
-                size="lg"
-                block>
+              <Button size="lg" block>
                 {config.name}
               </Button>
             </a>

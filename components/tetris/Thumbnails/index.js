@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-grid-system';
 import Thumbnail from './Thumbnail';
 import device from '../../../styleConfigs/breakPoints';
 
@@ -15,11 +15,7 @@ const Thumbnails = ({ thumbnails, title }) => {
         </Row>
         <Row>
           {thumbnails.map((thumbnail, index) => (
-            <Col
-              key={index}
-              xs="12"
-              md="6"
-              lg={isOdd ? 4 : 3}>
+            <Col key={index} sm={12} md={6} lg={isOdd ? 4 : 3}>
               <Thumbnail {...thumbnail} />
             </Col>
           ))}
