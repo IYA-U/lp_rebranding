@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import withColorsProp from '../../hoc/withColorProps';
+import withColorsProp from '../../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
 import COLOR_MAPS from './COLOR_MAPS';
 

@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 
 import COLOR_MAP from './COLOR_MAP';
-import withColorPropsWithMap from '../../hoc/withColorProps';
+import withColorPropsWithMap from '../../../hoc/withColorProps';
 
 import constants from './constants';
 import Sl from './Sl';

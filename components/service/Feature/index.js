@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import COLOR_MAP from './COLOR_MAP';
-import withColorPropsWithMap from '../../hoc/withColorProps';
+import withColorPropsWithMap from '../../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
 
 import Panel from './Panel';

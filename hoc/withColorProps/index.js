@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { ConfigContext } from '../withConfigProvider';
 import createCssValue from './createCssValue';
-import { Config as ConfigStorybook } from '../../../.storybook/contexts';
+import { Config as ConfigStorybook } from '../../.storybook/contexts';
 
 // 1パーツに対する色設定を表すよう、ThemeProviderを上書きする
 const withColorPropsWithMap = (ChildComponent, COLOR_MAPS) => (props) => {

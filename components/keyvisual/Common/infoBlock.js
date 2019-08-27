@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import withColorProps from '../../hoc/withColorProps';
+import withColorProps from '../../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
 
 const COLOR_MAP = {
@@ -23,9 +23,8 @@ const InfoBlock = ({ text }) => (
         __html: text,
       }}
     />
-    <img
-      src="/static/img/keyvisual/centerImage/teiichi.png"
-      alt="" />
+    <img src="/static/img/keyvisual/centerImage/teiichi.png"
+alt="" />
     <Cta>CTAボタン最大文字数17</Cta>
   </Wrap>
 );

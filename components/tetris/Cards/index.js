@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
 
 import COLOR_MAPS from './COLOR_MAPS';
-import withColorPropsWithMap from '../../hoc/withColorProps';
+import withColorPropsWithMap from '../../../hoc/withColorProps';
 
 import Card from './Card';
 import device from '../../../styleConfigs/breakPoints';

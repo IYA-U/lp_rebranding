@@ -67,13 +67,53 @@
     "@storybook/addons": "5.x",
     "@storybook/react": "5.x",
     "eslint": "5.x",
-    "eslint-config-airbnb-base": "13.x",
     "eslint-config-prettier": "4.x",
-    "eslint-plugin-better-styled-components": "1.x",
-    "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-prettier": "3.x",
     "eslint-plugin-react": "7.x",
-    "preact": "^8.5.1"
+    "eslint-plugin-react-hooks": "1.x",
+    "preact": "8.x"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "rules": {
+      "arrow-parens": "off",
+      "jsx-a11y/anchor-is-valid": "off",
+      "no-console": 1,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ],
+    "plugins": [
+      "jsx-a11y",
+      "react",
+      "prettier",
+      "react-hooks"
+    ],
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "16.8"
+      }
+    }
   }
 }

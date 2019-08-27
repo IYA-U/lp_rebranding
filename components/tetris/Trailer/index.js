@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Container, Row, Col } from 'reactstrap';
 
 import COLOR_MAPS from './COLOR_MAPS';
-import withColorPropsWithMap from '../../hoc/withColorProps';
+import withColorPropsWithMap from '../../../hoc/withColorProps';
 import device from '../../../styleConfigs/breakPoints';
 import SubPatternWrap from '../common/SubPatternWrap';
 import Video from './Video';

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import device from '../../../styleConfigs/breakPoints';
 
-import { ConfigContext } from '../../hoc/withConfigProvider';
+import { ConfigContext } from '../../../hoc/withConfigProvider';
 
 const Panel = ({ numStr, title, filter }) => {
   const config = useContext(ConfigContext);

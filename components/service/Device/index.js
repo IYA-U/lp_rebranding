@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import COLOR_MAP from './COLOR_MAP';
 import device from '../../../styleConfigs/breakPoints';
-import withColorPropsWithMap from '../../hoc/withColorProps';
+import withColorPropsWithMap from '../../../hoc/withColorProps';
 
 const Device = () => (
   <Wrap>
     <Inner>
       <img
         src="/static/img/service/device/device.png"
-        alt=""></img>
+        alt=""/ >
     </Inner>
   </Wrap>
 );
