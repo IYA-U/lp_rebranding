@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { UncontrolledCollapse } from 'reactstrap';
 import device from '../../../styleConfigs/breakPoints';
 
-const Qa = (props) => (
-  <FaqList>
-    <DefList>
-      <DefTerm id={`toggler${props.data.no}`}>
-        {props.data.term}
-        <Arrow></Arrow>
-      </DefTerm>
-      <UncontrolledCollapse toggler={`#toggler${props.data.no}`}>
-        <DefDes>{props.data.description}</DefDes>
-      </UncontrolledCollapse>
-    </DefList>
-  </FaqList>
-);
+const Qa = ({ data }) => {
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleQa = () => {
+    setOpen(!isOpen);
+  };
+  return (
+    <FaqList>
+      <DefList>
+        <DefTerm
+          isOpen={isOpen}
+          onClick={toggleQa}>
+          {data.term}
+          <Arrow
+            isOpen={isOpen}
+            onClick={toggleQa} />
+        </DefTerm>
+        <DefDes
+          isOpen={isOpen}
+          onClick={toggleQa}>
+          <p> {data.description}</p>
+        </DefDes>
+      </DefList>
+    </FaqList>
+  );
+};
 
 const FaqList = styled.li`
   height: auto;
@@ -41,32 +53,43 @@ const DefTerm = styled.dt`
   padding: 3rem 3.2rem 2.8rem 3.2rem;
   position: relative;
   vertical-align: middle;
+  cursor:pointer;
   @media ${device.TAB} {
     font-size: 2rem;
     line-height: 3rem;
     padding: 3.8rem 6rem 3.4rem 6rem;
-  }
-  .open {
-    &:after {
-      transform: rotate(90deg) !important;
     }
   }
 `;
 
 const DefDes = styled.dd`
   background-color: #f2f2f2;
-  font-size: 1.4rem;
-  font-weight: 300;
-  letter-spacing: 0.2rem;
-  line-height: 1.9;
+
   margin-top: 0.2rem;
-  padding: 3rem 3.2rem;
-  text-align: justify;
+  padding-bottom: ${({ isOpen }) => (isOpen ? '3.2rem' : '0')};
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: ${({ isOpen }) => (isOpen ? '3.2rem' : '0')};
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
   @media ${device.TAB} {
     margin-top: 0.4rem;
-    padding: 3.2rem 6rem;
-    font-size: 1.8rem;
-    line-height: 2;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  p {
+    display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    line-height: 1.9;
+    text-align: justify;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    @media ${device.TAB} {
+      font-size: 1.8rem;
+      line-height: 2;
+    }
   }
 `;
 
@@ -79,6 +102,7 @@ const Arrow = styled.span`
   position: absolute;
   right: 3.2rem;
   top: 0;
+
   width: 15px;
   @media ${device.TAB} {
     width: 18px;
@@ -95,6 +119,8 @@ const Arrow = styled.span`
     position: absolute;
     right: 0;
     top: 0;
+    transform: rotate(${({ isOpen }) => (isOpen ? '90deg' : '180deg')});
+    transition-duration: 0.5s;
     width: 2px;
     @media ${device.TAB} {
       width: 2px;
