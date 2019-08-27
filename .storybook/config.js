@@ -1,10 +1,7 @@
 import React from 'react';
-
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withContexts } from '@storybook/addon-contexts/react';
-import { contexts } from './contexts';
-import { Config } from './contexts';
-import '../styleConfigs/global.css';
+export const ConfigContext = React.createContext();
 import GlobalStyle from '../styleConfigs/globalStyle';
 
 const defaultTheme = {
@@ -38,7 +35,7 @@ const defaultTheme = {
 // automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /\.stories\.js$/);
 function loadStories() {
-  req.keys().forEach((filename) => req(filename));
+  req.keys().forEach(filename => req(filename));
 }
 
 function withGlobalStyles(storyFn) {
@@ -54,9 +51,7 @@ addDecorator(withGlobalStyles);
 
 addDecorator(withContexts(contexts));
 
-addDecorator((story) => (
-  <Config.Provider value={defaultTheme}>{story()}</Config.Provider>
-));
+addDecorator(story => <ConfigContext.Provider value={defaultTheme}>{story()}</ConfigContext.Provider>);
 
 addParameters({
   viewport: {

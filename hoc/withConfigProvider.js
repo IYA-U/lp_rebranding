@@ -7,7 +7,7 @@ const withConfigProvider = (WrappedComponent, colorConfig) => {
   const EnchantedComponent = props => {
     const { width, height } = useWindowSize();
     const globalConfig = {
-      colorConfig: { 
+      colorConfig: {
         mode: colorConfig.mode,
         colors: {
           white: {

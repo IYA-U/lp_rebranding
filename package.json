@@ -44,13 +44,11 @@
   "dependencies": {
     "babel-eslint": "10.x",
     "babel-plugin-styled-components": "1.x",
-    "bootstrap": "4.x",
     "next": "9.x",
     "prettier": "1.x",
     "react": "16.x",
     "react-dom": "16.x",
     "react-grid-system": "5.x",
-    "react-on-screen": "2.x",
     "react-spring": "8.x",
     "react-use": "10.x",
     "styled-components": "4.x"
@@ -68,7 +66,9 @@
     "eslint-plugin-prettier": "3.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "1.x",
-    "preact": "8.x"
+    "preact": "8.x",
+    "qs": "^6.8.0",
+    "vue": "^2.6.10"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
