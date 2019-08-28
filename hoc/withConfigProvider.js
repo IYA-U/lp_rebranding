@@ -39,6 +39,12 @@ const withConfigProvider = (WrappedComponent, colorConfig) => {
     );
   };
   EnchantedComponent.displayName = 'EnchantedComponent';
+  EnchantedComponent.getInitialProps = async ctx => {
+    if (WrappedComponent.getInitialProps) {
+      return WrappedComponent.getInitialProps(ctx);
+    }
+    return {};
+  };
   return EnchantedComponent;
 };
 

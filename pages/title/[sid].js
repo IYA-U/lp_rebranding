@@ -1,38 +1,30 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import COLOR_CONFIG from './COLOR_CONFIG';
+import portalApiRequester from '../../reqester/portalApiRequester';
 import withConfigProvider from '../../hoc/withConfigProvider';
 import Footer from '../../components/common/Footer';
-import { Device, Spec, Feature } from '../../components/service';
 
-const COLOR_CONFIG = {
-  mode: 'dark',
-  colors: {
-    bright: {
-      hue: 193,
-      saturation: 67,
-      lightness: 53,
-    },
-    dark: {
-      hue: 210,
-      saturation: 100,
-      lightness: 19,
-    },
-  },
-};
-
-const Title = () => {
-  const router = useRouter();
-  const { sid } = router.query;
-
+const Title = ({ stageApiResponse }) => {
   return (
     <>
-      <h1>SID:{sid}</h1>
-      <Feature colorPtnId="a" />
-      <Device colorPtnId="a" />
-      <Spec colorPtnId="a" />
-      <Footer colorPtnId="a" />
+      <h1>{stageApiResponse.data.title_name}</h1>
+      <img src={`https://${stageApiResponse.data.thumbnail.standard}`} alt=""></img>
+      <pre>{JSON.stringify(stageApiResponse, undefined, 2)}</pre>
+      <Footer />
     </>
   );
+};
+
+Title.getInitialProps = async ({ query }) => {
+  const stageApiResponse = await portalApiRequester({
+    path: '/1/cmsuser/stage',
+    params: {
+      title_code: query.sid,
+    },
+  });
+  return {
+    stageApiResponse,
+  };
 };
 
 export default withConfigProvider(Title, COLOR_CONFIG);

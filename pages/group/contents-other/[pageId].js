@@ -1,35 +1,17 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import COLOR_CONFIG from './COLOR_CONFIG';
+import PAGE_PARAMS from './PAGE_PARAMS';
 import withConfigProvider from '../../../hoc/withConfigProvider';
 import Footer from '../../../components/common/Footer';
-import { Device, Spec, Feature } from '../../../components/service';
-
-const COLOR_CONFIG = {
-  mode: 'dark',
-  colors: {
-    bright: {
-      hue: 193,
-      saturation: 67,
-      lightness: 53,
-    },
-    dark: {
-      hue: 210,
-      saturation: 100,
-      lightness: 19,
-    },
-  },
-};
 
 const BookSeries = () => {
   const router = useRouter();
-  const { pageId } = router.query;
-
+  const PARAM = PAGE_PARAMS[router.query.pageId];
   return (
     <>
-      <h1>pageId:{pageId}</h1>
-      <Feature colorPtnId="a" />
-      <Device colorPtnId="a" />
-      <Spec colorPtnId="a" />
+      <h1>LPID:{PARAM.LPID}</h1>
+      <img src={PARAM.KANBAN} alt="" />
       <Footer colorPtnId="a" />
     </>
   );
