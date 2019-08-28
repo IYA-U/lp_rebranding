@@ -1,8 +1,23 @@
 import React from 'react';
-import COLOR_CONFIG from './COLOR_CONFIG';
 import portalApiRequester from '../../reqester/portalApiRequester';
 import withConfigProvider from '../../hoc/withConfigProvider';
 import Footer from '../../components/common/Footer';
+
+const COLOR_CONFIG = {
+  mode: 'dark',
+  colors: {
+    bright: {
+      hue: 193,
+      saturation: 67,
+      lightness: 53,
+    },
+    dark: {
+      hue: 210,
+      saturation: 100,
+      lightness: 19,
+    },
+  },
+};
 
 const BookSakuhin = ({ bookStageApiResponse }) => {
   return (
