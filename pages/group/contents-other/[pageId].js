@@ -21,21 +21,22 @@ const COLOR_CONFIG = {
 
 const PAGE_PARAMS = {
   page1: {
-    LPID: 'LPIDFORPAGE1',
+    LPID: 'LPIDFORPAGE_1',
     KANBAN: 'https://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045_960_720.jpg',
   },
   page2: {
-    LPID: 'LPIDFORPAGE2',
+    LPID: 'LPIDFORPAGE_2',
     KANBAN: 'https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_960_720.jpg',
   },
   page3: {
-    LPID: 'LPIDFORPAGE3',
+    LPID: 'LPIDFORPAGE_3',
     KANBAN: 'https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg',
   },
 };
 
-const BookSeries = () => {
+const ContentsOther = () => {
   const router = useRouter();
+  console.log(router.query.pageId);
   const PARAM = PAGE_PARAMS[router.query.pageId];
   return (
     <>
@@ -46,4 +47,4 @@ const BookSeries = () => {
   );
 };
 
-export default withConfigProvider(BookSeries, COLOR_CONFIG);
+export default withConfigProvider(ContentsOther, COLOR_CONFIG);

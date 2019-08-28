@@ -36,12 +36,12 @@
     "url": "git+https://github.com/IYA-U/lp_rebranding.git"
   },
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/IYA-U/lp_rebranding/issues"
   },
   "homepage": "https://github.com/IYA-U/lp_rebranding#readme",
   "dependencies": {
+    "now": "15.x",
     "babel-eslint": "10.x",
     "babel-plugin-styled-components": "1.x",
     "next": "9.x",
